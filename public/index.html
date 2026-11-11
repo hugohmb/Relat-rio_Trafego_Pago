@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automação de Vendas - EcofoodPack</title>
+    <script>
+        (() => {
+            const temaSalvo = localStorage.getItem('automacao-vendas-tema');
+            document.documentElement.dataset.theme = temaSalvo === 'dark' ? 'dark' : 'ecofood';
+        })();
+    </script>
+    <link rel="stylesheet" href="https://use.typekit.net/nrr2vsf.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Biblioteca SheetJS para ler o Excel -->
+    <script src="vendor/xlsx.full.min.js"></script>
+    <!-- Biblioteca Chart.js para os gráficos -->
+    <script src="vendor/chart.umd.min.js"></script>
+</head>
+<body>
+    <div class="container app-shell">
+        <header class="app-header">
+            <div class="app-brand">
+                <div class="app-brand-logo-wrap" aria-label="EcofoodPack">
+                    <img class="app-brand-logo app-brand-logo-color" src="assets/ecofoodpack-logo-color.png" alt="EcofoodPack">
+                    <img class="app-brand-logo app-brand-logo-white" src="assets/ecofoodpack-logo-white.png" alt="" aria-hidden="true">
+                </div>
+                <div class="app-brand-copy">
+                    <span class="app-eyebrow">Inteligência comercial e performance</span>
+                    <h1>Automação de Vendas</h1>
+                    <p>Dados, parceiros, relatórios e utilitários em um único ambiente.</p>
+                </div>
+            </div>
+
+            <div class="app-header-actions">
+                <button id="btnDesktopFerramentas" type="button" class="desktop-tools-button" hidden>⚙ Configurações</button>
+                <span class="app-version-badge">v3.0.0</span>
+                <div class="theme-switch" role="group" aria-label="Tema da interface">
+                    <button type="button" class="theme-option" data-theme-option="ecofood" aria-pressed="true">
+                        <span aria-hidden="true">☀</span>
+                        Ecofood
+                    </button>
+                    <button type="button" class="theme-option" data-theme-option="dark" aria-pressed="false">
+                        <span aria-hidden="true">◐</span>
+                        Escuro
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- NAVEGAÇÃO PRINCIPAL -->
+        <nav class="tabs" aria-label="Áreas da automação">
+            <button class="tab-btn active" onclick="abrirAba(event, 'abaDashboard')"><span>📊</span> Dashboard</button>
+            <button class="tab-btn" onclick="abrirAba(event, 'abaHistorico')"><span>📈</span> Histórico</button>
+            <button class="tab-btn" onclick="abrirAba(event, 'abaParceiros')"><span>👥</span> Parceiros</button>
+            <button class="tab-btn" onclick="abrirAba(event, 'abaLimparPlanilha')"><span>🧹</span> Limpar Planilha</button>
+            <button class="tab-btn" onclick="abrirAba(event, 'abaMontarRelatorio')"><span>🧾</span> Montar Relatório</button>
+            <button id="btnAbaPreviaRelatorio" class="tab-btn" onclick="abrirAba(event, 'abaPreviaRelatorio')"><span>🖥️</span> Prévia</button>
+        </nav>
+
+        <!-- ABA 1: DASHBOARD -->
+        <div id="abaDashboard" class="tab-content active">
+            <section class="painel-controles dashboard-panel">
+                <header class="ui-section-header">
+                    <div>
+                        <span class="ui-kicker">Visão rápida</span>
+                        <h2>Dashboard de Análise de Vendas e Mídia</h2>
+                        <p>Processe a planilha mensal da Tray e acompanhe os principais indicadores.</p>
+                    </div>
+                </header>
+
+                <div class="dashboard-input-card">
+                    <div class="dashboard-investment-grid">
+                        <label class="ui-field" for="investGoogle">
+                            <span>Investimento Google Ads</span>
+                            <input type="text" class="ui-manual-obrigatorio" id="investGoogle" placeholder="Ex: 5.500,50">
+                        </label>
+                        <label class="ui-field" for="investMeta">
+                            <span>Investimento Meta Ads</span>
+                            <input type="text" class="ui-manual-obrigatorio" id="investMeta" placeholder="Ex: 5.500,50">
+                        </label>
+                    </div>
+                    <div class="dashboard-import-row">
+                        <label class="dashboard-file-field" for="uploadExcel">
+                            <span>Planilha de vendas do mês</span>
+                            <input type="file" id="uploadExcel" accept=".xlsx,.xls,.xlsm,.csv,.tsv,.txt">
+                        </label>
+                        <button id="btnCalcular" class="btn-principal">Processar dados do mês</button>
+                    </div>
+                </div>
+
+                <div class="dashboard-summary-grid">
+                    <article class="dashboard-summary-card">
+                        <div class="dashboard-card-heading">
+                            <span class="dashboard-card-icon">💰</span>
+                            <div>
+                                <small>Receita líquida</small>
+                                <h3>Sem impostos e frete</h3>
+                            </div>
+                        </div>
+                        <dl class="dashboard-metrics-list">
+                            <div><dt>Faturamento geral</dt><dd id="dashFatGeral">R$ 0,00</dd></div>
+                            <div><dt>Vendas de parceiros</dt><dd id="dashFatParceiros" class="metric-danger">R$ 0,00</dd></div>
+                            <div><dt>Vendas sem parceiros</dt><dd id="dashFatDireto" class="metric-success">R$ 0,00</dd></div>
+                        </dl>
+                    </article>
+
+                    <article class="dashboard-summary-card">
+                        <div class="dashboard-card-heading">
+                            <span class="dashboard-card-icon">🛒</span>
+                            <div>
+                                <small>Operação comercial</small>
+                                <h3>Pedidos e ticket médio</h3>
+                            </div>
+                        </div>
+                        <div class="dashboard-order-grid">
+                            <dl class="dashboard-metrics-list compact">
+                                <div><dt>Vendas gerais</dt><dd id="dashQtdGeral">0</dd></div>
+                                <div><dt>De parceiros</dt><dd id="dashQtdParceiros">0</dd></div>
+                                <div><dt>Sem parceiros</dt><dd id="dashQtdTrafego">0</dd></div>
+                            </dl>
+                            <dl class="dashboard-metrics-list compact">
+                                <div><dt>Ticket geral</dt><dd id="dashTmGeral">R$ 0,00</dd></div>
+                                <div><dt>Ticket sem parceiros</dt><dd id="dashTmTrafego">R$ 0,00</dd></div>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="dashboard-efficiency-card">
+                        <div class="dashboard-efficiency-item">
+                            <span>ROAS Geral</span>
+                            <strong id="dashRoasGeral">0.00x</strong>
+                        </div>
+                        <div class="dashboard-efficiency-item featured">
+                            <span>ROAS Real · sem parceiros</span>
+                            <strong id="dashRoasReal">0.00x</strong>
+                        </div>
+                        <div class="dashboard-efficiency-item">
+                            <span>ROI estimado · sem parceiros</span>
+                            <strong id="dashRoi">0%</strong>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="dashboard-lower-grid">
+                    <section class="ui-chart-card dashboard-chart-card">
+                        <div class="ui-card-title">
+                            <div>
+                                <small>Distribuição mensal</small>
+                                <h3>Receita por classificação</h3>
+                            </div>
+                        </div>
+                        <div class="grafico-container dashboard-chart-area">
+                            <canvas id="graficoVendas"></canvas>
+                        </div>
+                    </section>
+
+                    <aside class="dashboard-ai-card">
+                        <span class="ui-kicker">Gemini AI</span>
+                        <h3>Análise executiva</h3>
+                        <p id="dashRelatorioIA"><em>Aguardando processamento dos dados do mês...</em></p>
+                    </aside>
+                </div>
+            </section>
+        </div>
+
+        <!-- ABA 2: HISTÓRICO COMPARATIVO -->
+        <div id="abaHistorico" class="tab-content">
+            <section class="painel-controles painel-historico" id="painelMemoriaMensal">
+                <div class="historico-cabecalho">
+                    <div>
+                        <h2>🧠 Histórico salvo pelo programa</h2>
+                        <p>Todos os meses já processados, recalculados com o Banco de Parceiros atual. É esta base que o Gemini usa para ler tendências.</p>
+                    </div>
+                    <button id="btnAtualizarMemoria" type="button" class="btn-secundario">Atualizar</button>
+                </div>
+                <div class="historico-memoria-wrap"><table class="historico-memoria-tabela" id="tabelaMemoriaMensal"><tbody><tr><td>Carregando…</td></tr></tbody></table></div>
+            </section>
+            <div class="painel-controles painel-historico">
+                <div class="historico-cabecalho">
+                    <div>
+                        <h2>📈 Histórico Comparativo</h2>
+                        <p>
+                            Compare a evolução dos três meses mais recentes e o mês atual
+                            com o mesmo período do ano anterior.
+                        </p>
+                    </div>
+                </div>
+
+                <section class="historico-secao-entrada">
+                    <h3>Comparação anual</h3>
+                    <p class="historico-ajuda">
+                        Envie a planilha correspondente ao mesmo mês do ano anterior.
+                    </p>
+
+                    <div class="historico-grid historico-grid-anual">
+                        <article class="historico-upload-card historico-card-anual">
+                            <label for="histNome4">Mesmo mês do ano anterior</label>
+                            <input type="text" id="histNome4" placeholder="Ex: Junho de 2025">
+                            <input type="file" id="histUpload4" accept=".xlsx,.xls,.xlsm,.csv,.tsv,.txt">
+                            <input type="text" id="histGAds4" placeholder="Google Ads (Ex: 4.000,00)">
+                            <input type="text" id="histMAds4" placeholder="Meta Ads (Ex: 5.000,00)">
+                        </article>
+                    </div>
+                </section>
+
+                <section class="historico-secao-entrada">
+                    <h3>Evolução recente</h3>
+                    <p class="historico-ajuda">
+                        Use os três períodos abaixo para visualizar a evolução mensal recente.
+                    </p>
+
+                    <div class="historico-grid historico-grid-recente">
+                        <article class="historico-upload-card historico-card-antigo">
+                            <label for="histNome1">Dois meses atrás</label>
+                            <input type="text" id="histNome1" placeholder="Ex: Abril de 2026">
+                            <input type="file" id="histUpload1" accept=".xlsx,.xls,.xlsm,.csv,.tsv,.txt">
+                            <input type="text" id="histGAds1" placeholder="Google Ads (Ex: 4.000,00)">
+                            <input type="text" id="histMAds1" placeholder="Meta Ads (Ex: 5.000,00)">
+                        </article>
+
+                        <article class="historico-upload-card historico-card-anterior">
+                            <label for="histNome2">Mês anterior</label>
+                            <input type="text" id="histNome2" placeholder="Ex: Maio de 2026">
+                            <input type="file" id="histUpload2" accept=".xlsx,.xls,.xlsm,.csv,.tsv,.txt">
+                            <input type="text" id="histGAds2" placeholder="Google Ads (Ex: 4.000,00)">
+                            <input type="text" id="histMAds2" placeholder="Meta Ads (Ex: 5.000,00)">
+                        </article>
+
+                        <article class="historico-upload-card historico-card-atual">
+                            <label for="histNome3">Mês atual</label>
+                            <input type="text" id="histNome3" placeholder="Ex: Junho de 2026">
+                            <input type="file" id="histUpload3" accept=".xlsx,.xls,.xlsm,.csv,.tsv,.txt">
+                            <input type="text" id="histGAds3" placeholder="Google Ads (Ex: 4.000,00)">
+                            <input type="text" id="histMAds3" placeholder="Meta Ads (Ex: 5.000,00)">
+                        </article>
+                    </div>
+                </section>
+
+                <button id="btnGerarHistorico" class="btn-principal btn-historico">
+                    Processar comparativos
+                </button>
+                <p id="histStatusProcessamento" class="historico-status" hidden></p>
+
+                <section id="secaoResultadosHistorico" class="historico-resultados" hidden>
+                    <h3>Resultados por período</h3>
+                    <div id="painelResultadosHistorico" class="historico-cards-resultados"></div>
+                </section>
+
+                <section id="painelGraficosHistorico" class="historico-painel-graficos" hidden>
+                    <div class="historico-titulo-bloco">
+                        <h3>Evolução dos meses recentes</h3>
+                        <p>Os gráficos abaixo consideram apenas os três períodos mensais recentes.</p>
+                    </div>
+
+                    <div class="historico-graficos-grid">
+                        <div class="historico-grafico-card"><canvas id="graficoHistReceita"></canvas></div>
+                        <div class="historico-grafico-card"><canvas id="graficoHistVendas"></canvas></div>
+                        <div class="historico-grafico-card"><canvas id="graficoHistTickets"></canvas></div>
+                        <div class="historico-grafico-card"><canvas id="graficoHistRoas"></canvas></div>
+                    </div>
+                </section>
+
+                <section id="painelComparativoAnual" class="historico-painel-anual" hidden>
+                    <div class="historico-titulo-bloco">
+                        <h3>Comparação com o mesmo mês do ano anterior</h3>
+                        <p id="textoPeriodoComparativoAnual"></p>
+                    </div>
+
+                    <div id="resumoComparativoAnual" class="historico-variacoes-grid"></div>
+
+                    <div class="historico-graficos-grid historico-graficos-anual">
+                        <div class="historico-grafico-card"><canvas id="graficoAnualReceita"></canvas></div>
+                        <div class="historico-grafico-card"><canvas id="graficoAnualPedidos"></canvas></div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- ABA 3: BANCO DE PARCEIROS -->
+        <div id="abaParceiros" class="tab-content">
+            <div class="painel-cadastro">
+                <h3>Cadastrar Novo Representante/Distribuidor</h3>
+                <div class="input-group">
+                    <input type="text" id="nomeVendedor" placeholder="Digite o nome principal ou Razão Social...">
+                    <button id="btnAdicionarVendedor" class="btn-secundario">Adicionar</button>
+                </div>
+                
+                <hr>
+                
+                <div class="parceiros-lista-cabecalho">
+                    <h3>Parceiros Cadastrados</h3>
+                    <span id="contadorParceiros" class="parceiros-contador">
+                        0 parceiros cadastrados
+                    </span>
+                </div>
+                <input type="text" id="buscaVendedor" placeholder="🔍 Buscar parceiro na lista..." class="input-busca">
+                
+                <ul id="listaVendedores"></ul>
+            </div>
+        </div>
+
+        <!-- ABA 4: LIMPAR PLANILHA -->
+        <div id="abaLimparPlanilha" class="tab-content">
+            <div class="limpador-painel">
+                <header class="limpador-cabecalho">
+                    <div>
+                        <span class="limpador-etiqueta">UTILITÁRIO INTEGRADO</span>
+                        <h2>🧹 Limpar Planilha por Clientes</h2>
+                        <p>
+                            Remova da planilha as linhas de clientes cadastrados no Banco de Parceiros
+                            ou use uma lista personalizada. O arquivo original não é alterado.
+                        </p>
+                    </div>
+                    <div class="limpador-privacidade">
+                        <span></span>
+                        Processamento local no navegador
+                    </div>
+                </header>
+
+                <div class="limpador-grid-principal">
+                    <div class="limpador-coluna-formulario">
+                        <section class="limpador-card">
+                            <div class="limpador-card-cabecalho">
+                                <span class="limpador-passo">1</span>
+                                <div>
+                                    <h3>Selecionar a planilha</h3>
+                                    <p>Formatos aceitos: CSV, XLSX, XLS e XLSB.</p>
+                                </div>
+                            </div>
+                            <div class="limpador-card-corpo">
+                                <label id="limpadorDropZone" class="limpador-drop-zone" for="limpadorArquivoInput">
+                                    <span class="limpador-drop-icone">⇧</span>
+                                    <strong id="limpadorDropTitulo">Clique ou arraste a planilha aqui</strong>
+                                    <small id="limpadorDropSubtitulo">A cópia original permanecerá intacta.</small>
+                                </label>
+                                <input id="limpadorArquivoInput" class="limpador-arquivo-input" type="file" accept=".xlsx,.xls,.xlsb,.csv">
+
+                                <div id="limpadorArquivoMeta" class="limpador-arquivo-meta" hidden>
+                                    <div>
+                                        <strong id="limpadorArquivoNome">—</strong>
+                                        <span id="limpadorArquivoTamanho">—</span>
+                                    </div>
+                                    <button id="limpadorTrocarArquivo" type="button" class="btn-secundario">Trocar arquivo</button>
+                                </div>
+
+                                <div class="limpador-campos-grid">
+                                    <label class="limpador-campo">
+                                        <span>Aba da planilha</span>
+                                        <select id="limpadorAbaSelect" disabled>
+                                            <option value="">Carregue um arquivo</option>
+                                        </select>
+                                    </label>
+                                    <label class="limpador-campo">
+                                        <span>Linha do cabeçalho</span>
+                                        <input id="limpadorCabecalhoLinha" type="number" min="1" value="1" disabled>
+                                    </label>
+                                    <label class="limpador-campo limpador-campo-largo">
+                                        <span>Coluna que contém o nome do cliente</span>
+                                        <select id="limpadorColunaSelect" disabled>
+                                            <option value="">Carregue um arquivo</option>
+                                        </select>
+                                    </label>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="limpador-card">
+                            <div class="limpador-card-cabecalho">
+                                <span class="limpador-passo">2</span>
+                                <div>
+                                    <h3>Escolher os clientes que serão removidos</h3>
+                                    <p>O Banco de Parceiros já vem selecionado.</p>
+                                </div>
+                            </div>
+                            <div class="limpador-card-corpo">
+                                <div class="limpador-fontes">
+                                    <label class="limpador-fonte-opcao">
+                                        <input id="limpadorFonteBanco" type="radio" name="limpadorFonte" value="banco" checked>
+                                        <span>
+                                            <strong>Usar o Banco de Parceiros</strong>
+                                            <small id="limpadorBancoResumo">Carregando parceiros cadastrados...</small>
+                                        </span>
+                                    </label>
+                                    <label class="limpador-fonte-opcao">
+                                        <input id="limpadorFontePersonalizada" type="radio" name="limpadorFonte" value="personalizada">
+                                        <span>
+                                            <strong>Usar uma lista personalizada</strong>
+                                            <small>Cole um nome por linha ou uma lista JSON.</small>
+                                        </span>
+                                    </label>
+                                </div>
+
+                                <div id="limpadorListaPersonalizadaBloco" class="limpador-lista-personalizada" hidden>
+                                    <label class="limpador-campo">
+                                        <span>Lista personalizada</span>
+                                        <textarea id="limpadorListaPersonalizada" spellcheck="false" placeholder='[
+  "CLIENTE EXEMPLO LTDA",
+  "HUGO MENDES"
+]'></textarea>
+                                    </label>
+                                </div>
+
+                                <div class="limpador-regra">
+                                    <strong>Regra de comparação exata</strong>
+                                    <span>Maiúsculas e minúsculas são ignoradas e espaços externos são removidos.</span>
+                                    <code> Hugo Mendes </code>
+                                    <span>corresponde a</span>
+                                    <code>HUGO MENDES</code>
+                                    <span>mas não corresponde a</span>
+                                    <code>HUGO MENDES SILVA</code>
+                                </div>
+
+                                <div class="limpador-acoes">
+                                    <button id="limpadorBtnAnalisar" type="button" class="btn-principal" disabled>Analisar planilha</button>
+                                    <button id="limpadorBtnGerar" type="button" class="limpador-btn-gerar" disabled>Gerar Excel limpo</button>
+                                </div>
+                                <div id="limpadorStatus" class="limpador-status" role="status" aria-live="polite" hidden></div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <aside class="limpador-card limpador-conferencia">
+                        <div class="limpador-card-cabecalho">
+                            <span class="limpador-passo">3</span>
+                            <div>
+                                <h3>Conferência</h3>
+                                <p>Revise o resultado antes de gerar o novo arquivo.</p>
+                            </div>
+                        </div>
+
+                        <div id="limpadorResumoVazio" class="limpador-resumo-vazio">
+                            <span>⌕</span>
+                            <strong>Nenhuma análise realizada</strong>
+                            <p>Carregue a planilha e clique em “Analisar planilha”.</p>
+                        </div>
+
+                        <div id="limpadorResumoConteudo" class="limpador-resumo-conteudo" hidden>
+                            <div class="limpador-metricas">
+                                <article>
+                                    <strong id="limpadorMetricaTotal">0</strong>
+                                    <span>linhas de dados</span>
+                                </article>
+                                <article class="limpador-metrica-remover">
+                                    <strong id="limpadorMetricaRemover">0</strong>
+                                    <span>linhas para excluir</span>
+                                </article>
+                                <article class="limpador-metrica-manter">
+                                    <strong id="limpadorMetricaManter">0</strong>
+                                    <span>linhas restantes</span>
+                                </article>
+                                <article>
+                                    <strong id="limpadorMetricaNomes">0</strong>
+                                    <span>nomes encontrados</span>
+                                </article>
+                            </div>
+
+                            <div class="limpador-detalhes">
+                                <details>
+                                    <summary><span>Nomes encontrados</span><strong id="limpadorEncontradosTotal">0</strong></summary>
+                                    <ol id="limpadorEncontradosLista"></ol>
+                                </details>
+                                <details>
+                                    <summary><span>Nomes não encontrados</span><strong id="limpadorNaoEncontradosTotal">0</strong></summary>
+                                    <ol id="limpadorNaoEncontradosLista"></ol>
+                                </details>
+                            </div>
+
+                            <label class="limpador-campo limpador-nome-saida">
+                                <span>Nome do novo arquivo</span>
+                                <input id="limpadorNomeSaida" type="text" value="planilha_clientes_removidos.xlsx">
+                            </label>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+
+        <!-- ABA 5: MONTAR RELATÓRIO -->
+        <div id="abaMontarRelatorio" class="tab-content">
+            <div class="relatorio-montagem">
+                <header class="relatorio-cabecalho">
+                    <div>
+                        <span class="relatorio-etapa">ETAPA 5</span>
+                        <h2>🧾 Montar Relatório Mensal</h2>
+                        <p>
+                            Adicione os arquivos e informações na mesma ordem das páginas do relatório.
+                            Nesta etapa, o sistema valida e organiza as entradas antes da criação da prévia.
+                        </p>
+                    </div>
+                    <div class="relatorio-resumo-progresso">
+                        <strong id="relContadorEntradas">0 de 8 arquivos selecionados</strong>
+                        <span id="relResumoSituacao">Aguardando preenchimento</span>
+                    </div>
+                </header>
+
+                <section class="relatorio-projeto-controles" aria-label="Projeto mensal do relatório">
+                    <div class="relatorio-projeto-texto">
+                        <span class="relatorio-etapa">ETAPA 12</span>
+                        <h3>Salvar e continuar o projeto</h3>
+                        <p>Salve os dados processados, os campos manuais e os textos editados em um arquivo JSON. Os arquivos originais (XLSX ou CSV) não são incorporados ao projeto.</p>
+                        <span id="relStatusProjeto" class="relatorio-projeto-status projeto-status-neutro"></span>
+                    </div>
+                    <div class="relatorio-projeto-acoes">
+                        <button id="btnSalvarProjeto" type="button" class="btn-principal">💾 Salvar projeto</button>
+                        <button id="btnCarregarProjeto" type="button" class="btn-secundario">📂 Carregar projeto</button>
+                        <button id="btnNovoRelatorio" type="button" class="btn-projeto-novo">＋ Novo relatório</button>
+                        <input id="inputCarregarProjeto" type="file" accept="application/json,.json" hidden>
+                    </div>
+                </section>
+
+                <section id="relZonaArquivos" class="relatorio-zona-arquivos" tabindex="0" aria-label="Soltar todos os arquivos do mês">
+                    <input id="relEntradaMultipla" type="file" multiple accept=".xlsx,.xls,.xlsm,.csv,.tsv,.txt" hidden>
+                    <div class="relatorio-zona-icone" aria-hidden="true">⇪</div>
+                    <div class="relatorio-zona-texto">
+                        <strong>Arraste aqui todos os arquivos do mês (ou clique para escolher)</strong>
+                        <small>XLSX, XLS ou CSV de qualquer plataforma. O programa identifica sozinho o que é Tray (vendas e visitas), Google Analytics (resumo e produtos) e Meta Ads, descobre o mês de cada um e coloca cada arquivo no lugar certo.</small>
+                    </div>
+                    <ul id="relZonaResultado" class="relatorio-zona-resultado" hidden></ul>
+                </section>
+
+                <div class="relatorio-fluxo">
+                    <section class="relatorio-secao" data-relatorio-secao="identificacao">
+                        <div class="relatorio-numero">1</div>
+                        <div class="relatorio-conteudo">
+                            <div class="relatorio-titulo-secao">
+                                <div>
+                                    <h3>Identificação do relatório</h3>
+                                    <p>Capa e definição do período analisado.</p>
+                                </div>
+                                <span class="relatorio-badge relatorio-badge-obrigatorio">Obrigatório</span>
+                            </div>
+
+                            <div class="relatorio-grid relatorio-grid-2">
+                                <label class="relatorio-campo">
+                                    <span>Mês de referência</span>
+                                    <input type="month" id="relPeriodoReferencia">
+                                </label>
+                                <label class="relatorio-campo">
+                                    <span>Foco principal da análise</span>
+                                    <input type="text" id="relFocoAnalise" placeholder="Ex: desempenho de vendas, mídia e evolução anual">
+                                </label>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="relatorio-secao" data-relatorio-secao="informacoes-periodo">
+                        <div class="relatorio-numero">2</div>
+                        <div class="relatorio-conteudo">
+                            <div class="relatorio-titulo-secao">
+                                <div>
+                                    <h3>Página 2 — Implementações Técnicas e Estruturais</h3>
+                                    <p>Preencha cada campo conforme o destino indicado. A posição abaixo acompanha a ordem visual do relatório.</p>
+                                </div>
+                                <span class="relatorio-badge relatorio-badge-opcional">Editável</span>
+                            </div>
+
+                            <div class="relatorio-mapa-pagina2">
+                                <div class="relatorio-mapa-introducao">
+                                    <span class="relatorio-mapa-etiqueta">TOPO DA PÁGINA 2</span>
+                                    <div>
+                                        <strong>Texto introdutório</strong>
+                                        <p>É gerado automaticamente pelo Gemini usando os três campos abaixo. Ele não corresponde ao conteúdo da Coluna 1.</p>
+                                    </div>
+                                </div>
+
+                                <div class="relatorio-grid relatorio-grid-pagina2">
+                                    <label class="relatorio-campo relatorio-campo-destino">
+                                        <span><b class="relatorio-destino-numero">1</b> Coluna 1 — Implementações</span>
+                                        <small>Aparece no primeiro card, à esquerda, abaixo do título “1. IMPLEMENTAÇÕES”.</small>
+                                        <textarea class="ui-manual-obrigatorio" id="relImplementacoes" rows="6" placeholder="Liste as implementações e melhorias realizadas no mês."></textarea>
+                                    </label>
+
+                                    <label class="relatorio-campo relatorio-campo-destino">
+                                        <span><b class="relatorio-destino-numero">2</b> Coluna 2 — Correções e estrutura</span>
+                                        <small>Aparece no card central, abaixo do título “2. CORREÇÕES E ESTRUTURA”.</small>
+                                        <textarea class="ui-manual-obrigatorio" id="relCorrecoes" rows="6" placeholder="Registre correções, ajustes e problemas resolvidos."></textarea>
+                                    </label>
+
+                                    <label class="relatorio-campo relatorio-campo-destino">
+                                        <span><b class="relatorio-destino-numero">3</b> Coluna 3 — Direcionamento estratégico</span>
+                                        <small>Aparece no terceiro card, à direita, abaixo do título “3. DIRECIONAMENTO ESTRATÉGICO”.</small>
+                                        <textarea class="ui-manual-obrigatorio" id="relDecisoes" rows="6" placeholder="Inclua decisões comerciais, de mídia, SEO ou direcionamentos relevantes."></textarea>
+                                    </label>
+                                </div>
+
+                                <div class="relatorio-pagina-extra">
+                                    <div class="relatorio-pagina-extra-cabecalho">
+                                        <span class="relatorio-mapa-etiqueta">PÁGINA 12</span>
+                                        <div>
+                                            <strong>Roadmap — Objetivos e próximos passos</strong>
+                                            <p>Este campo não aparece na página 2. Ele alimenta o bloco “Roadmap de Estratégias” da página 12.</p>
+                                        </div>
+                                    </div>
+                                    <label class="relatorio-campo">
+                                        <textarea class="ui-manual-obrigatorio" id="relProximosPassos" rows="5" placeholder="Informe os objetivos planejados para o próximo período."></textarea>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="relatorio-secao" data-relatorio-secao="ga-resumo">
+                        <div class="relatorio-numero">3</div>
+                        <div class="relatorio-conteudo">
+                            <div class="relatorio-titulo-secao">
+                                <div>
+                                    <h3>Resumo do Google Analytics</h3>
+                                    <p>Origina o resumo das fontes de tráfego e das etapas de conversão.</p>
+                                </div>
+                                <span class="relatorio-badge relatorio-badge-obrigatorio">Página 3</span>
+                            </div>
+                            <div class="relatorio-upload" data-upload-chave="gaResumo">
+                                <input type="file" id="relArquivoGaResumo" accept=".xlsx,.xls,.xlsm,.csv,.tsv,.txt">
+                                <div class="relatorio-upload-info">
+                                    <strong>Resumo de relatório de tráfego</strong>
+                                    <small>Preferencialmente, use o CSV original do Google Analytics.</small>
+                                    <span id="relNomeGaResumo">Nenhum arquivo selecionado</span>
+                                </div>
+                                <span id="relStatusGaResumo" class="relatorio-status-arquivo status-aguardando">Aguardando</span>
+                            </div>
+                            <div id="relResumoGa" class="relatorio-resumo-ga" hidden></div>
+                        </div>
+                    </section>
+
+                    <section class="relatorio-secao" data-relatorio-secao="produtos">
+                        <div class="relatorio-numero">4</div>
+                        <div class="relatorio-conteudo">
+                            <div class="relatorio-titulo-secao">
+                                <div>
+                                    <h3>Produtos mais vendidos</h3>
+                                    <p>Serão utilizados os 20 primeiros produtos, ordenados pela quantidade comprada.</p>
+                                </div>
+                                <span class="relatorio-badge relatorio-badge-obrigatorio">Páginas 4 e 5</span>
+                            </div>
+                            <div class="relatorio-upload" data-upload-chave="produtos">
+                                <input type="file" id="relArquivoProdutos" accept=".xlsx,.xls,.xlsm,.csv,.tsv,.txt">
+                                <div class="relatorio-upload-info">
+                                    <strong>Produtos Mais Vendidos — Google Analytics</strong>
+                                    <small>Preferencialmente, use o CSV original para preservar os decimais.</small>
+                                    <span id="relNomeProdutos">Nenhum arquivo selecionado</span>
+                                </div>
+                                <span id="relStatusProdutos" class="relatorio-status-arquivo status-aguardando">Aguardando</span>
+                            </div>
+                            <div id="relResumoProdutos" class="relatorio-resumo-produtos" hidden></div>
+                        </div>
+                    </section>
+
+                    <section class="relatorio-secao" data-relatorio-secao="investimentos">
+                        <div class="relatorio-numero">5</div>
+                        <div class="relatorio-conteudo">
+                            <div class="relatorio-titulo-secao">
+                                <div>
+                                    <h3>Resultados e investimentos das plataformas</h3>
+                                    <p>O Google Analytics alimenta automaticamente a receita do Google Ads e o retorno disponível. A receita do Meta Ads pode ser informada manualmente quando houver uma apuração interna.</p>
+                                </div>
+                                <span class="relatorio-badge relatorio-badge-obrigatorio">Página 6</span>
+                            </div>
+
+                            <div class="relatorio-grid relatorio-grid-4">
+                                <div class="relatorio-campo-calculado">
+                                    <span>Receita Google Ads — GA4</span>
+                                    <strong id="relReceitaGoogleCalculada">Aguardando GA4</strong>
+                                    <small id="relCriterioReceitaGoogle">Categoria “Tráfego pago”</small>
+                                </div>
+                                <label class="relatorio-campo">
+                                    <span>Investimento Google Ads</span>
+                                    <input type="text" class="ui-manual-obrigatorio" id="relInvestGoogle" inputmode="decimal" placeholder="Ex: 5.196,75">
+                                </label>
+                                <label class="relatorio-campo">
+                                    <span>Receita atribuída ao Meta Ads / Interno (opcional)</span>
+                                    <input type="text" class="ui-manual-opcional" id="relReceitaMetaManual" inputmode="decimal" placeholder="Ex: 2.000,00">
+                                    <small id="relReceitaMetaSituacao">Não apurado enquanto o campo estiver vazio.</small>
+                                </label>
+                                <label class="relatorio-campo">
+                                    <span>Investimento Meta Ads</span>
+                                    <input type="text" class="ui-manual-obrigatorio" id="relInvestMeta" inputmode="decimal" placeholder="Ex: 4.065,48">
+                                </label>
+                                <label class="relatorio-campo relatorio-campo-largo">
+                                    <span>Origem ou observação da receita Meta (opcional)</span>
+                                    <input type="text" class="ui-manual-opcional" id="relOrigemReceitaMeta" placeholder="Ex: Meta + vendas internas identificadas">
+                                </label>
+                            </div>
+
+                            <div class="relatorio-totais-manuais">
+                                <div>
+                                    <span>Investimento total</span>
+                                    <strong id="relInvestimentoTotal">R$ 0,00</strong>
+                                </div>
+                                <div>
+                                    <span>Retorno disponível — Tráfego pago menos Outros</span>
+                                    <strong id="relReceitaAtribuidaTotal">Aguardando GA4</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="relatorio-secao" data-relatorio-secao="vendas-tray">
+                        <div class="relatorio-numero">6</div>
+                        <div class="relatorio-conteudo">
+                            <div class="relatorio-titulo-secao">
+                                <div>
+                                    <h3>Vendas do mês atual — Tray</h3>
+                                    <p>O mesmo processador utilizado no Dashboard será reutilizado nesta etapa.</p>
+                                </div>
+                                <span class="relatorio-badge relatorio-badge-obrigatorio">Páginas 7 e 8</span>
+                            </div>
+                            <div class="relatorio-upload" data-upload-chave="vendasAtual">
+                                <input type="file" id="relArquivoVendasAtual" accept=".xlsx,.xls,.xlsm,.csv,.tsv,.txt">
+                                <div class="relatorio-upload-info">
+                                    <strong>Planilha de vendas do mês atual</strong>
+                                    <span id="relNomeVendasAtual">Nenhum arquivo selecionado</span>
+                                </div>
+                                <span id="relStatusVendasAtual" class="relatorio-status-arquivo status-aguardando">Aguardando</span>
+                            </div>
+                            <div id="relResumoVendasAtual" class="relatorio-resumo-vendas" hidden></div>
+                        </div>
+                    </section>
+
+                    <section class="relatorio-secao" data-relatorio-secao="visitas">
+                        <div class="relatorio-numero">7</div>
+                        <div class="relatorio-conteudo">
+                            <div class="relatorio-titulo-secao">
+                                <div>
+                                    <h3>Comportamento de visitas na loja</h3>
+                                    <p>Dados diários para o gráfico de acessos e comportamento mensal.</p>
+                                </div>
+                                <span class="relatorio-badge relatorio-badge-obrigatorio">Página 9</span>
+                            </div>
+                            <div class="relatorio-upload" data-upload-chave="visitas">
+                                <input type="file" id="relArquivoVisitas" accept=".xlsx,.xls,.xlsm,.csv,.tsv,.txt">
+                                <div class="relatorio-upload-info">
+                                    <strong>Comportamento de Visitas na Loja — Tray</strong>
+                                    <span id="relNomeVisitas">Nenhum arquivo selecionado</span>
+                                </div>
+                                <span id="relStatusVisitas" class="relatorio-status-arquivo status-aguardando">Aguardando</span>
+                            </div>
+                            <div id="relResumoVisitas" class="relatorio-resumo-visitas" hidden></div>
+                        </div>
+                    </section>
+
+                    <section class="relatorio-secao" data-relatorio-secao="historico">
+                        <div class="relatorio-numero">8</div>
+                        <div class="relatorio-conteudo">
+                            <div class="relatorio-titulo-secao">
+                                <div>
+                                    <h3>Histórico recente e comparação anual</h3>
+                                    <p>O mês atual será reutilizado da seção de vendas. Meses que já passaram pelo programa são preenchidos automaticamente pelo histórico salvo (recalculados com o banco de parceiros atual); só é preciso enviar a planilha de um mês que ainda não está no histórico.</p>
+                                </div>
+                                <span class="relatorio-badge relatorio-badge-obrigatorio">Página 10</span>
+                            </div>
+
+                            <div class="relatorio-historico-grid">
+                                <article class="relatorio-periodo-card">
+                                    <h4>Dois meses atrás</h4>
+                                    <label class="relatorio-campo relatorio-campo-periodo"><span>Mês do arquivo</span><input type="month" class="ui-manual-obrigatorio" id="relHistNome1" required></label>
+                                    <div class="relatorio-upload relatorio-upload-compacto" data-upload-chave="hist1">
+                                        <input type="file" id="relHistArquivo1" accept=".xlsx,.xls,.xlsm,.csv,.tsv,.txt">
+                                        <div class="relatorio-upload-info"><span id="relNomeHist1">Selecionar planilha</span></div>
+                                        <small id="relMemoriaHist1" class="relatorio-memoria-hist" hidden></small>
+                                        <span id="relStatusHist1" class="relatorio-status-arquivo status-aguardando">Aguardando</span>
+                                    </div>
+                                    <input type="text" class="ui-manual-obrigatorio" id="relHistGoogle1" inputmode="decimal" placeholder="Investimento Google Ads">
+                                    <input type="text" class="ui-manual-obrigatorio" id="relHistMeta1" inputmode="decimal" placeholder="Investimento Meta Ads">
+                                </article>
+
+                                <article class="relatorio-periodo-card">
+                                    <h4>Mês anterior</h4>
+                                    <label class="relatorio-campo relatorio-campo-periodo"><span>Mês do arquivo</span><input type="month" class="ui-manual-obrigatorio" id="relHistNome2" required></label>
+                                    <div class="relatorio-upload relatorio-upload-compacto" data-upload-chave="hist2">
+                                        <input type="file" id="relHistArquivo2" accept=".xlsx,.xls,.xlsm,.csv,.tsv,.txt">
+                                        <div class="relatorio-upload-info"><span id="relNomeHist2">Selecionar planilha</span></div>
+                                        <small id="relMemoriaHist2" class="relatorio-memoria-hist" hidden></small>
+                                        <span id="relStatusHist2" class="relatorio-status-arquivo status-aguardando">Aguardando</span>
+                                    </div>
+                                    <input type="text" class="ui-manual-obrigatorio" id="relHistGoogle2" inputmode="decimal" placeholder="Investimento Google Ads">
+                                    <input type="text" class="ui-manual-obrigatorio" id="relHistMeta2" inputmode="decimal" placeholder="Investimento Meta Ads">
+                                </article>
+
+                                <article class="relatorio-periodo-card relatorio-periodo-anual">
+                                    <h4>Mesmo mês do ano anterior <small>(opcional)</small></h4>
+                                    <label class="relatorio-campo relatorio-campo-periodo"><span>Mês do arquivo</span><input type="month" class="ui-manual-opcional" id="relHistNomeAno"></label>
+                                    <div class="relatorio-upload relatorio-upload-compacto" data-upload-chave="histAno">
+                                        <input type="file" id="relHistArquivoAno" accept=".xlsx,.xls,.xlsm,.csv,.tsv,.txt">
+                                        <div class="relatorio-upload-info"><span id="relNomeHistAno">Selecionar planilha</span></div>
+                                        <small id="relMemoriaHistAno" class="relatorio-memoria-hist" hidden></small>
+                                        <span id="relStatusHistAno" class="relatorio-status-arquivo status-opcional">Opcional</span>
+                                    </div>
+                                    <input type="text" class="ui-manual-opcional" id="relHistGoogleAno" inputmode="decimal" placeholder="Investimento Google Ads (opcional)">
+                                    <input type="text" class="ui-manual-opcional" id="relHistMetaAno" inputmode="decimal" placeholder="Investimento Meta Ads (opcional)">
+                                </article>
+
+                                <article class="relatorio-periodo-card relatorio-periodo-atual">
+                                    <h4>Mês atual</h4>
+                                    <p>Arquivo e investimentos reutilizados automaticamente das seções 5 e 6.</p>
+                                    <span id="relPeriodoAtualReutilizado" class="relatorio-periodo-reutilizado">Aguardando mês de referência</span>
+                                </article>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="relatorio-secao" data-relatorio-secao="meta-ads">
+                        <div class="relatorio-numero">9</div>
+                        <div class="relatorio-conteudo">
+                            <div class="relatorio-titulo-secao">
+                                <div>
+                                    <h3>Desempenho do Meta Ads</h3>
+                                    <p>Alcance, impressões, cliques, CPC, investimento, compras e campanhas.</p>
+                                </div>
+                                <span class="relatorio-badge relatorio-badge-obrigatorio">Página 11</span>
+                            </div>
+                            <div class="relatorio-upload" data-upload-chave="metaAds">
+                                <input type="file" id="relArquivoMetaAds" accept=".xlsx,.xls,.xlsm,.csv,.tsv,.txt">
+                                <div class="relatorio-upload-info">
+                                    <strong>Desempenho Meta Ads</strong>
+                                    <small>CSV e XLSX são aceitos; os indicadores derivados são recalculados.</small>
+                                    <span id="relNomeMetaAds">Nenhum arquivo selecionado</span>
+                                </div>
+                                <span id="relStatusMetaAds" class="relatorio-status-arquivo status-aguardando">Aguardando</span>
+                            </div>
+                            <div id="relResumoMetaAds" class="relatorio-resumo-meta" hidden></div>
+                        </div>
+                    </section>
+
+                    <section class="relatorio-secao" data-relatorio-secao="conclusao">
+                        <div class="relatorio-numero">10</div>
+                        <div class="relatorio-conteudo">
+                            <div class="relatorio-titulo-secao">
+                                <div>
+                                    <h3>Orientação para a conclusão</h3>
+                                    <p>Contexto adicional para orientar a análise final do Gemini.</p>
+                                </div>
+                                <span class="relatorio-badge relatorio-badge-opcional">Página 12</span>
+                            </div>
+                            <label class="relatorio-campo">
+                                <span>Observações que precisam aparecer na conclusão</span>
+                                <textarea class="ui-manual-opcional" id="relObservacoesConclusao" rows="5" placeholder="Inclua ressalvas de rastreamento, mudanças estratégicas ou pontos que precisam ser destacados."></textarea>
+                            </label>
+                        </div>
+                    </section>
+                </div>
+
+                <section class="relatorio-processamento">
+                    <div class="relatorio-processamento-cabecalho">
+                        <div>
+                            <h3>Validação e preparação dos dados</h3>
+                            <p>Todos os leitores de planilhas estão ativos. A validação também consolida os indicadores, os comparativos e a situação de cada página do relatório.</p>
+                        </div>
+                        <button id="btnValidarRelatorio" class="btn-principal">Validar entradas</button>
+                    </div>
+
+                    <div class="relatorio-barra">
+                        <div id="relBarraProgresso" class="relatorio-barra-preenchimento"></div>
+                    </div>
+                    <p id="relStatusGeral" class="relatorio-status-geral">Aguardando o preenchimento das entradas.</p>
+                    <div id="relListaProcessamento" class="relatorio-lista-processamento"></div>
+                    <div id="relResumoValidacao" class="relatorio-resumo-validacao" hidden></div>
+                    <section id="relPainelConsolidacao" class="relatorio-painel-consolidacao" hidden></section>
+                    <section id="relPainelHomologacao" class="relatorio-painel-homologacao" hidden></section>
+
+                    <section id="relPainelAnalisesIA" class="relatorio-painel-analises" hidden>
+                        <div class="relatorio-analises-cabecalho">
+                            <div>
+                                <span class="relatorio-etapa">ETAPA 9</span>
+                                <h3>Análises do Gemini por seção</h3>
+                                <p>Assim que os dados são validados, o Gemini escreve todas as seções de uma vez, usando também o histórico dos meses anteriores. Revise e edite livremente antes da prévia.</p>
+                                <label class="relatorio-auto-ia"><input type="checkbox" id="relGerarAnalisesAutomaticamente" checked> Gerar as análises automaticamente após a validação</label>
+                            </div>
+                            <button id="btnGerarAnalisesPendentes" type="button" class="btn-principal">Gerar análises pendentes</button>
+                        </div>
+
+                        <div id="relResumoAnalisesIA" class="relatorio-analises-resumo"></div>
+
+                        <div class="relatorio-analises-progresso">
+                            <div class="relatorio-barra">
+                                <div id="relBarraAnalisesIA" class="relatorio-barra-preenchimento"></div>
+                            </div>
+                            <p id="relStatusAnalisesIA">Aguardando a consolidação dos dados.</p>
+                        </div>
+
+                        <div id="relListaAnalisesIA" class="relatorio-analises-lista"></div>
+                    </section>
+
+                    <button id="btnGerarRelatorio" class="btn-relatorio-bloqueado" type="button" disabled>
+                        Validar os dados para liberar a prévia
+                    </button>
+                </section>
+            </div>
+        </div>
+
+        <!-- ABA 6: PRÉVIA DO RELATÓRIO -->
+        <div id="abaPreviaRelatorio" class="tab-content">
+            <div class="painel-controles previa-relatorio-painel">
+                <header class="previa-relatorio-cabecalho">
+                    <div>
+                        <span class="relatorio-etapa">ETAPA 10</span>
+                        <h2>🖥️ Prévia do Relatório</h2>
+                        <p>Confira as 12 páginas em proporção A4 horizontal e gere o arquivo PDF final.</p>
+                    </div>
+                    <div class="previa-relatorio-acoes">
+                        <button id="btnAtualizarPrevia" type="button" class="btn-principal">Gerar/atualizar prévia</button>
+                        <button id="btnPdfPrevia" type="button" class="btn-relatorio-bloqueado" disabled>Gerar PDF final</button>
+                    </div>
+                </header>
+
+                <div id="previaAviso" class="previa-relatorio-aviso">
+                    Valide os dados na aba Montar Relatório para liberar a prévia.
+                </div>
+
+                <div id="pdfProgresso" class="pdf-progresso" hidden>
+                    <div class="pdf-progresso-topo">
+                        <strong id="pdfProgressoTitulo">Preparando PDF...</strong>
+                        <span id="pdfProgressoPercentual">0%</span>
+                    </div>
+                    <div class="pdf-progresso-trilho">
+                        <div id="pdfProgressoBarra" class="pdf-progresso-barra"></div>
+                    </div>
+                    <p id="pdfProgressoMensagem">Aguardando início da exportação.</p>
+                </div>
+
+                <div class="previa-relatorio-toolbar">
+                    <button id="btnPaginaAnterior" type="button" class="btn-secundario">← Página anterior</button>
+                    <strong id="previaContadorPagina">Página 1 de 12</strong>
+                    <button id="btnProximaPagina" type="button" class="btn-secundario">Próxima página →</button>
+                </div>
+
+                <div class="previa-relatorio-layout">
+                    <aside id="previaNavegacao" class="previa-relatorio-navegacao" aria-label="Páginas do relatório"></aside>
+                    <main class="previa-relatorio-viewport">
+                        <div id="previaEstadoVazio" class="previa-relatorio-vazio">
+                            <strong>Nenhuma prévia gerada.</strong>
+                            <span>Consolide os dados e clique em “Gerar/atualizar prévia”.</span>
+                        </div>
+                        <div id="previaPaginas" class="previa-relatorio-paginas" hidden></div>
+                    </main>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="desktopConfigModal" class="desktop-config-modal" hidden>
+        <section class="desktop-config-card" role="dialog" aria-modal="true" aria-labelledby="desktopConfigTitulo">
+            <header class="desktop-config-header">
+                <div>
+                    <span class="ui-kicker">Aplicativo instalado</span>
+                    <h2 id="desktopConfigTitulo">Configurações do Desktop</h2>
+                    <p>Gerencie a chave do Gemini, as pastas de dados, a importação do pendrive e os backups.</p>
+                </div>
+                <button id="desktopConfigFechar" type="button" class="desktop-config-close" aria-label="Fechar">×</button>
+            </header>
+
+            <div class="desktop-config-grid">
+                <section class="desktop-config-section desktop-config-section-wide">
+                    <h3>Gemini</h3>
+                    <p>A chave fica em <code>config/gemini.json</code>, dentro da sua pasta de dados.</p>
+                    <div class="desktop-config-fields">
+                        <label>
+                            <span>Chave da API</span>
+                            <input id="desktopGeminiChave" type="password" autocomplete="off" placeholder="Cole a chave da API do Gemini">
+                        </label>
+                        <label>
+                            <span>Modelo</span>
+                            <input id="desktopGeminiModelo" type="text" value="gemini-2.5-flash">
+                        </label>
+                    </div>
+                    <div class="desktop-config-actions">
+                        <button id="desktopBtnSalvarGemini" type="button" class="btn-principal">Salvar configuração</button>
+                        <button id="desktopBtnRemoverGemini" type="button" class="btn-secundario">Remover chave</button>
+                    </div>
+                </section>
+
+                <section class="desktop-config-section">
+                    <h3>Pasta de dados</h3>
+                    <p id="desktopRaizPortatil" class="desktop-path">Pasta do aplicativo</p>
+                    <div class="desktop-config-actions desktop-config-actions-column">
+                        <button id="desktopBtnAbrirProjetos" type="button" class="btn-secundario">Abrir projetos</button>
+                        <button id="desktopBtnAbrirRelatorios" type="button" class="btn-secundario">Abrir relatórios</button>
+                    </div>
+                </section>
+
+                <section class="desktop-config-section">
+                    <h3>Migração e segurança</h3>
+                    <div class="desktop-config-actions desktop-config-actions-column">
+                        <button id="desktopBtnCriarAtalho" type="button" class="btn-principal">Importar dados do pendrive</button>
+                        <button id="desktopBtnBackupBanco" type="button" class="btn-secundario">Criar backup dos parceiros</button>
+                    </div>
+                </section>
+            </div>
+
+            <p id="desktopConfigStatus" class="desktop-config-status desktop-config-status-neutro">Aguardando uma ação.</p>
+        </section>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

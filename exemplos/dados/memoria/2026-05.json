@@ -1,0 +1,4431 @@
+{
+ "versao": 1,
+ "periodo": "2026-05",
+ "periodoFormatado": "Maio de 2026",
+ "salvoEm": "2026-11-11T15:59:44.203Z",
+ "origem": "dados-ficticios-de-demonstracao",
+ "investimentos": {
+  "google": 2700,
+  "meta": 2300,
+  "total": 5000
+ },
+ "vendas": {
+  "fatGeral": 340878.55,
+  "fatParceiros": 234161.71,
+  "fatSemParceiros": 106716.84,
+  "qtdGeral": 610,
+  "qtdParceiros": 254,
+  "qtdSemParceiros": 356,
+  "parceirosCadastradosNaApuracao": 120,
+  "porCanal": {
+   "LOJA VIRTUAL": {
+    "faturamento": 218156.73000000007,
+    "pedidos": 476,
+    "faturamentoParceiros": 111439.88999999998,
+    "pedidosParceiros": 120
+   },
+   "B2B_PORTAL": {
+    "faturamento": 122721.82000000005,
+    "pedidos": 134,
+    "faturamentoParceiros": 122721.82000000005,
+    "pedidosParceiros": 134
+   }
+  },
+  "porOrigemUtm": {
+   "Google Ads": {
+    "faturamento": 56665.390000000014,
+    "pedidos": 168,
+    "faturamentoParceiros": 9363.19,
+    "pedidosParceiros": 12
+   },
+   "Sem UTM": {
+    "faturamento": 260482.58999999994,
+    "pedidos": 359,
+    "faturamentoParceiros": 224798.51999999996,
+    "pedidosParceiros": 242
+   },
+   "Assistentes de IA": {
+    "faturamento": 11579.199999999999,
+    "pedidos": 40,
+    "faturamentoParceiros": 0,
+    "pedidosParceiros": 0
+   },
+   "Meta / Instagram": {
+    "faturamento": 12151.369999999999,
+    "pedidos": 43,
+    "faturamentoParceiros": 0,
+    "pedidosParceiros": 0
+   }
+  },
+  "vendasUtmGoogleAds": {
+   "faturamento": 56665.390000000014,
+   "pedidos": 168,
+   "faturamentoSemParceiros": 47302.20000000001,
+   "pedidosSemParceiros": 156,
+   "criterio": "Pedidos da Tray cuja coluna \"UTM Source\" contém \"Google Ads\"."
+  }
+ },
+ "pedidos": [
+  [
+   "HUGO RIBEIRO",
+   509.64,
+   "2026-05-05",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "NATÁLIA QUINTELA",
+   410.79,
+   "2026-05-08",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "LARISSA MAGALHÃES",
+   179.37,
+   "2026-05-15",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "VÂNIA DAMASCENO",
+   303.55,
+   "2026-05-30",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "BRUNO DAMASCENO",
+   146.13,
+   "2026-05-15",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "COMERCIAL MARÉ ALTA EIRELI",
+   783.3,
+   "2026-05-15",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "PAULA CARDOSO",
+   108.01,
+   "2026-05-24",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "COMERCIAL AÇAÍ & CIA ME",
+   573.27,
+   "2026-05-06",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "COMERCIAL SOL NASCENTE ME",
+   723.78,
+   "2026-05-03",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "HUGO PEIXOTO",
+   449.37,
+   "2026-05-13",
+   "LOJA VIRTUAL",
+   "chatgpt.com"
+  ],
+  [
+   "COMERCIAL BOA MESA EIRELI",
+   926.87,
+   "2026-05-22",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "ÍRIS VALENÇA",
+   492.19,
+   "2026-05-11",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "PAULA ORLEANS",
+   462.4,
+   "2026-05-25",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "EMPÓRIO MARMITA FELIZ ME",
+   463.01,
+   "2026-05-18",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "FÁBIO DAMASCENO",
+   381.41,
+   "2026-05-25",
+   "LOJA VIRTUAL",
+   "chatgpt.com"
+  ],
+  [
+   "DIEGO RIBEIRO",
+   375.73,
+   "2026-05-20",
+   "LOJA VIRTUAL",
+   "ig"
+  ],
+  [
+   "COMERCIAL CAFÉ PARAÍSO",
+   631.89,
+   "2026-05-16",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "DEPÓSITO MARMITA FELIZ LTDA",
+   608.77,
+   "2026-05-17",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "ÍRIS NOGUEIRA",
+   226.01,
+   "2026-05-01",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "DIEGO ORLEANS",
+   427.75,
+   "2026-05-02",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "OTÁVIO SIMÕES",
+   456.73,
+   "2026-05-01",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "LARISSA LACERDA",
+   418.98,
+   "2026-05-16",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "EMPÓRIO SÃO JOÃO",
+   934.42,
+   "2026-05-11",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "COMERCIAL SÃO JOÃO LTDA",
+   755.27,
+   "2026-05-13",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "EMPÓRIO CANTINHO MINEIRO ME",
+   712.55,
+   "2026-05-21",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "JOÃO ESTEVES",
+   464.72,
+   "2026-05-05",
+   "LOJA VIRTUAL",
+   "chatgpt.com"
+  ],
+  [
+   "WESLEY VALENÇA",
+   356.15,
+   "2026-05-23",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "CENTRAL SOL NASCENTE ME",
+   1023.92,
+   "2026-05-04",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "PAULA VALENÇA",
+   491.52,
+   "2026-05-09",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "ATACADO CANTINHO MINEIRO EIRELI",
+   842.76,
+   "2026-05-06",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "DIEGO HENRIQUES",
+   379.5,
+   "2026-05-18",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "EMPÓRIO OURO PRETO",
+   1390.37,
+   "2026-05-26",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "VÂNIA HENRIQUES",
+   519.63,
+   "2026-05-05",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "MÁRCIO PEIXOTO",
+   458.34,
+   "2026-05-20",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "JOÃO LACERDA",
+   199.9,
+   "2026-05-31",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "ANA HENRIQUES",
+   178.11,
+   "2026-05-06",
+   "LOJA VIRTUAL",
+   "ig"
+  ],
+  [
+   "GABRIELA BRANDÃO",
+   513.09,
+   "2026-05-17",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "WESLEY BRANDÃO",
+   128.66,
+   "2026-05-06",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "NATÁLIA FALCÃO",
+   452.55,
+   "2026-05-29",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "WESLEY HENRIQUES",
+   187.57,
+   "2026-05-16",
+   "LOJA VIRTUAL",
+   "chatgpt.com"
+  ],
+  [
+   "BRUNO GUIMARÃES",
+   309.68,
+   "2026-05-24",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "VÂNIA MAGALHÃES",
+   230.54,
+   "2026-05-15",
+   "LOJA VIRTUAL",
+   "chatgpt.com"
+  ],
+  [
+   "BRUNO PEIXOTO",
+   278.99,
+   "2026-05-13",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "RAFAEL NOGUEIRA",
+   398.75,
+   "2026-05-14",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "RAFAEL SIMÕES",
+   212.72,
+   "2026-05-30",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "ANA FALCÃO",
+   235.21,
+   "2026-05-05",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "EMPÓRIO SOL NASCENTE EIRELI",
+   366.67,
+   "2026-05-21",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "MÁRCIO RIBEIRO",
+   246.09,
+   "2026-05-12",
+   "LOJA VIRTUAL",
+   "chatgpt.com"
+  ],
+  [
+   "LARISSA DAMASCENO",
+   264.73,
+   "2026-05-18",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "HUGO PEIXOTO",
+   352.1,
+   "2026-05-02",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "MÁRCIO RIBEIRO",
+   115.09,
+   "2026-05-10",
+   "LOJA VIRTUAL",
+   "chatgpt.com"
+  ],
+  [
+   "HUGO HENRIQUES",
+   297.41,
+   "2026-05-09",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "CENTRAL BOA MESA",
+   1367.96,
+   "2026-05-20",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "DIEGO ALBUQUERQUE",
+   286.29,
+   "2026-05-13",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "LARISSA ORLEANS",
+   186.15,
+   "2026-05-22",
+   "LOJA VIRTUAL",
+   "chatgpt.com"
+  ],
+  [
+   "COMERCIAL CAFÉ PARAÍSO EIRELI",
+   861.09,
+   "2026-05-10",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "EMPÓRIO MARMITA FELIZ EIRELI",
+   1329.27,
+   "2026-05-09",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "ATACADO SÃO JOÃO LTDA",
+   872.61,
+   "2026-05-11",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "EMBALAGENS GRÃO NOBRE EIRELI",
+   409.57,
+   "2026-05-31",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "VÂNIA GUIMARÃES",
+   449.26,
+   "2026-05-26",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "EMBALAGENS BOA MESA",
+   505.72,
+   "2026-05-06",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "JOÃO PEIXOTO",
+   487.79,
+   "2026-05-05",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "EMPÓRIO TERRA NOSSA",
+   1096.05,
+   "2026-05-03",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "RAFAEL CARDOSO",
+   385.11,
+   "2026-05-06",
+   "LOJA VIRTUAL",
+   "ig"
+  ],
+  [
+   "GABRIELA QUINTELA",
+   189.84,
+   "2026-05-17",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "ELISA DAMASCENO",
+   307.61,
+   "2026-05-12",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "CENTRAL MARÉ ALTA EIRELI",
+   1080.02,
+   "2026-05-17",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "SÔNIA FALCÃO",
+   356.72,
+   "2026-05-08",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "HUGO BRANDÃO",
+   459.22,
+   "2026-05-23",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "WESLEY TOLEDO",
+   187.53,
+   "2026-05-20",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "CENTRAL BOM PRATO EIRELI",
+   1239.65,
+   "2026-05-11",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "RAFAEL ALBUQUERQUE",
+   122.04,
+   "2026-05-03",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "WESLEY PEIXOTO",
+   514.89,
+   "2026-05-21",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "DIEGO CARDOSO",
+   401.52,
+   "2026-05-16",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "VÂNIA LACERDA",
+   283.21,
+   "2026-05-03",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "COMERCIAL BOA MESA ME",
+   946.87,
+   "2026-05-08",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "ATACADO DELÍCIAS DO SERTÃO",
+   373.55,
+   "2026-05-01",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "NATÁLIA CARDOSO",
+   210.32,
+   "2026-05-08",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "LARISSA VALENÇA",
+   160.4,
+   "2026-05-04",
+   "LOJA VIRTUAL",
+   "ig"
+  ],
+  [
+   "NATÁLIA HENRIQUES",
+   447.89,
+   "2026-05-30",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "NATÁLIA SIMÕES",
+   103.15,
+   "2026-05-29",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "RAFAEL CARDOSO",
+   381.64,
+   "2026-05-04",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "CENTRAL DOCE LAR EIRELI",
+   1156.05,
+   "2026-05-19",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "CENTRAL FOGÃO À LENHA ME",
+   1434.01,
+   "2026-05-08",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "EMPÓRIO AÇAÍ & CIA EIRELI",
+   765.21,
+   "2026-05-18",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "ELISA NOGUEIRA",
+   465.9,
+   "2026-05-01",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "LARISSA HENRIQUES",
+   370.27,
+   "2026-05-03",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "EMBALAGENS GRÃO NOBRE ME",
+   952.86,
+   "2026-05-07",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "MÁRCIO GUIMARÃES",
+   159.64,
+   "2026-05-02",
+   "LOJA VIRTUAL",
+   "chatgpt.com"
+  ],
+  [
+   "EMPÓRIO CANTINHO MINEIRO ME",
+   484.26,
+   "2026-05-02",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "COMERCIAL TERRA NOSSA EIRELI",
+   782.01,
+   "2026-05-15",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "TIAGO FALCÃO",
+   360.52,
+   "2026-05-28",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "RAFAEL GUIMARÃES",
+   440.09,
+   "2026-05-08",
+   "LOJA VIRTUAL",
+   "chatgpt.com"
+  ],
+  [
+   "LARISSA SIMÕES",
+   383.88,
+   "2026-05-03",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "EMPÓRIO DELÍCIAS DO SERTÃO",
+   693.83,
+   "2026-05-23",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "DIEGO TOLEDO",
+   106.22,
+   "2026-05-18",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "ANA MAGALHÃES",
+   278.89,
+   "2026-05-30",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "NATÁLIA HENRIQUES",
+   386.43,
+   "2026-05-15",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "EMBALAGENS PÃO DOURADO ME",
+   802.86,
+   "2026-05-26",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "OTÁVIO DAMASCENO",
+   376.14,
+   "2026-05-18",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "FÁBIO ESTEVES",
+   242.81,
+   "2026-05-12",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "ANA BRANDÃO",
+   501.87,
+   "2026-05-29",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "EMPÓRIO TERRA NOSSA",
+   463.32,
+   "2026-05-16",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "COMERCIAL BOA MESA EIRELI",
+   555.74,
+   "2026-05-12",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "VÂNIA QUINTELA",
+   350.64,
+   "2026-05-15",
+   "LOJA VIRTUAL",
+   "ig"
+  ],
+  [
+   "MÁRCIO NOGUEIRA",
+   279.87,
+   "2026-05-16",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "PAULA VALENÇA",
+   114.98,
+   "2026-05-02",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "ÍRIS CARDOSO",
+   269.05,
+   "2026-05-24",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "VÂNIA ESTEVES",
+   118.33,
+   "2026-05-05",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "FÁBIO RIBEIRO",
+   186.58,
+   "2026-05-30",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "DISTRIBUIDORA FOGÃO À LENHA ME",
+   1389.48,
+   "2026-05-27",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "FÁBIO CARDOSO",
+   355.7,
+   "2026-05-02",
+   "LOJA VIRTUAL",
+   "chatgpt.com"
+  ],
+  [
+   "DEPÓSITO OURO PRETO ME",
+   1189.44,
+   "2026-05-16",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "RAFAEL ALBUQUERQUE",
+   103.05,
+   "2026-05-13",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "GABRIELA MAGALHÃES",
+   104.16,
+   "2026-05-06",
+   "LOJA VIRTUAL",
+   "chatgpt.com"
+  ],
+  [
+   "FÁBIO QUINTELA",
+   487.62,
+   "2026-05-17",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "WESLEY FALCÃO",
+   333.21,
+   "2026-05-14",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "EMBALAGENS VILA GOURMET LTDA",
+   707.08,
+   "2026-05-28",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "DEPÓSITO CAFÉ PARAÍSO ME",
+   748.71,
+   "2026-05-11",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "ATACADO DELÍCIAS DO SERTÃO EIRELI",
+   610.45,
+   "2026-05-02",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "COMERCIAL SOL NASCENTE ME",
+   919.93,
+   "2026-05-06",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "WESLEY RIBEIRO",
+   223.26,
+   "2026-05-19",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "EMPÓRIO SÃO JOÃO ME",
+   1436.03,
+   "2026-05-01",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "VÂNIA HENRIQUES",
+   201.94,
+   "2026-05-31",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "GABRIELA TOLEDO",
+   362.5,
+   "2026-05-29",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "EMPÓRIO CANTINHO MINEIRO EIRELI",
+   943.72,
+   "2026-05-03",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "FÁBIO RIBEIRO",
+   154.84,
+   "2026-05-18",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "DEPÓSITO CANTINHO MINEIRO ME",
+   906.04,
+   "2026-05-15",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "WESLEY VALENÇA",
+   108.76,
+   "2026-05-31",
+   "LOJA VIRTUAL",
+   "ig"
+  ],
+  [
+   "FÁBIO QUINTELA",
+   250.29,
+   "2026-05-14",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "SÔNIA ALBUQUERQUE",
+   120.74,
+   "2026-05-07",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "PAULA VALENÇA",
+   327.59,
+   "2026-05-22",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "TIAGO SIMÕES",
+   107.16,
+   "2026-05-19",
+   "LOJA VIRTUAL",
+   "chatgpt.com"
+  ],
+  [
+   "PAULA NOGUEIRA",
+   154.06,
+   "2026-05-11",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "NATÁLIA BRANDÃO",
+   420.93,
+   "2026-05-01",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "EMPÓRIO DOCE LAR",
+   572.12,
+   "2026-05-05",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "EMPÓRIO FOGÃO À LENHA EIRELI",
+   888.24,
+   "2026-05-05",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "COMERCIAL MARMITA FELIZ ME",
+   641.89,
+   "2026-05-10",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "HUGO FALCÃO",
+   210.1,
+   "2026-05-15",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "DISTRIBUIDORA MARMITA FELIZ LTDA",
+   780.31,
+   "2026-05-05",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "ÍRIS HENRIQUES",
+   257.48,
+   "2026-05-19",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "EMPÓRIO AÇAÍ & CIA EIRELI",
+   1273.82,
+   "2026-05-22",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "OTÁVIO GUIMARÃES",
+   308.37,
+   "2026-05-31",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "COMERCIAL MARMITA FELIZ ME",
+   1441.48,
+   "2026-05-18",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "RAFAEL RIBEIRO",
+   94.41,
+   "2026-05-08",
+   "LOJA VIRTUAL",
+   "ig"
+  ],
+  [
+   "ATACADO DELÍCIAS DO SERTÃO EIRELI",
+   882.81,
+   "2026-05-14",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "COMERCIAL FOGÃO À LENHA EIRELI",
+   633.62,
+   "2026-05-16",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "DEPÓSITO ESTAÇÃO LANCHES EIRELI",
+   1294.19,
+   "2026-05-22",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "ELISA MAGALHÃES",
+   388.62,
+   "2026-05-11",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "DEPÓSITO ESTAÇÃO LANCHES LTDA",
+   1518.12,
+   "2026-05-03",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "JOÃO TOLEDO",
+   434.63,
+   "2026-05-01",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "EMBALAGENS MARMITA FELIZ",
+   1255.69,
+   "2026-05-10",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "ELISA NOGUEIRA",
+   478.49,
+   "2026-05-23",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "DEPÓSITO TERRA NOSSA",
+   384.57,
+   "2026-05-08",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "RAFAEL VALENÇA",
+   364.42,
+   "2026-05-02",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "DISTRIBUIDORA CANTINHO MINEIRO ME",
+   724.08,
+   "2026-05-17",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "DISTRIBUIDORA BOM PRATO ME",
+   1127.99,
+   "2026-05-14",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "JOÃO RIBEIRO",
+   222.44,
+   "2026-05-06",
+   "LOJA VIRTUAL",
+   "ig"
+  ],
+  [
+   "ATACADO ESTAÇÃO LANCHES LTDA",
+   692.11,
+   "2026-05-12",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "ATACADO DELÍCIAS DO SERTÃO",
+   789.75,
+   "2026-05-09",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "ATACADO MARMITA FELIZ EIRELI",
+   1184.75,
+   "2026-05-02",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "ATACADO MARMITA FELIZ EIRELI",
+   1179.78,
+   "2026-05-13",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "FÁBIO HENRIQUES",
+   286.93,
+   "2026-05-03",
+   "LOJA VIRTUAL",
+   "ig"
+  ],
+  [
+   "CARLA SIMÕES",
+   451.41,
+   "2026-05-31",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "RAFAEL ORLEANS",
+   424.23,
+   "2026-05-08",
+   "LOJA VIRTUAL",
+   "ig"
+  ],
+  [
+   "CENTRAL GRÃO NOBRE EIRELI",
+   549.44,
+   "2026-05-10",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "BRUNO ORLEANS",
+   190.75,
+   "2026-05-13",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "HUGO NOGUEIRA",
+   387.22,
+   "2026-05-05",
+   "LOJA VIRTUAL",
+   "ig"
+  ],
+  [
+   "VÂNIA QUINTELA",
+   203.87,
+   "2026-05-13",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "RAFAEL NOGUEIRA",
+   314.64,
+   "2026-05-26",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "EMPÓRIO SABOR VERDE EIRELI",
+   1398.76,
+   "2026-05-05",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "GABRIELA PEIXOTO",
+   254.9,
+   "2026-05-26",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "EMPÓRIO SOL NASCENTE EIRELI",
+   1089.25,
+   "2026-05-05",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "DIEGO CARDOSO",
+   404.51,
+   "2026-05-13",
+   "LOJA VIRTUAL",
+   "ig"
+  ],
+  [
+   "CENTRAL MARÉ ALTA EIRELI",
+   486.79,
+   "2026-05-23",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "EMPÓRIO BOM PRATO EIRELI",
+   599.89,
+   "2026-05-29",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "ATACADO CAFÉ PARAÍSO EIRELI",
+   1228.23,
+   "2026-05-21",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "DISTRIBUIDORA SABOR VERDE",
+   893.32,
+   "2026-05-13",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "ANA CARDOSO",
+   210.07,
+   "2026-05-08",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "FÁBIO VALENÇA",
+   298.27,
+   "2026-05-06",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "DIEGO QUINTELA",
+   465.53,
+   "2026-05-21",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "ANA BRANDÃO",
+   501.34,
+   "2026-05-30",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "RAFAEL NOGUEIRA",
+   109.73,
+   "2026-05-08",
+   "LOJA VIRTUAL",
+   "chatgpt.com"
+  ],
+  [
+   "ÍRIS DAMASCENO",
+   408.08,
+   "2026-05-15",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "ATACADO DOCE LAR EIRELI",
+   465.94,
+   "2026-05-14",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "HUGO ESTEVES",
+   448.69,
+   "2026-05-23",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "COMERCIAL CAFÉ PARAÍSO EIRELI",
+   779.49,
+   "2026-05-28",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "OTÁVIO ORLEANS",
+   483.68,
+   "2026-05-15",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "OTÁVIO BRANDÃO",
+   302.65,
+   "2026-05-03",
+   "LOJA VIRTUAL",
+   "chatgpt.com"
+  ],
+  [
+   "RAFAEL FALCÃO",
+   134.44,
+   "2026-05-03",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "MÁRCIO NOGUEIRA",
+   101.37,
+   "2026-05-04",
+   "LOJA VIRTUAL",
+   "chatgpt.com"
+  ],
+  [
+   "EMBALAGENS TERRA NOSSA",
+   566.19,
+   "2026-05-28",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "ATACADO OURO PRETO LTDA",
+   1426.39,
+   "2026-05-03",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "DEPÓSITO HORTA VIVA",
+   688.01,
+   "2026-05-04",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "RAFAEL DAMASCENO",
+   171.58,
+   "2026-05-03",
+   "LOJA VIRTUAL",
+   "chatgpt.com"
+  ],
+  [
+   "MÁRCIO ALBUQUERQUE",
+   507.63,
+   "2026-05-25",
+   "LOJA VIRTUAL",
+   "ig"
+  ],
+  [
+   "CENTRAL GRÃO NOBRE EIRELI",
+   1159.42,
+   "2026-05-14",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "NATÁLIA ORLEANS",
+   394.82,
+   "2026-05-07",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "HUGO NOGUEIRA",
+   287.99,
+   "2026-05-30",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "EMPÓRIO ESTAÇÃO LANCHES",
+   1339.79,
+   "2026-05-25",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "ÍRIS NOGUEIRA",
+   362.24,
+   "2026-05-04",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "DISTRIBUIDORA TERRA NOSSA LTDA",
+   467.1,
+   "2026-05-16",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "CENTRAL BOM PRATO ME",
+   873.47,
+   "2026-05-03",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "COMERCIAL SÃO JOÃO LTDA",
+   1067.77,
+   "2026-05-16",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "PAULA FALCÃO",
+   107.69,
+   "2026-05-13",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "COMERCIAL MARMITA FELIZ ME",
+   580.74,
+   "2026-05-24",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "DISTRIBUIDORA CANTINHO MINEIRO ME",
+   415.88,
+   "2026-05-09",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "WESLEY CARDOSO",
+   356.64,
+   "2026-05-03",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "RAFAEL MAGALHÃES",
+   446.15,
+   "2026-05-12",
+   "LOJA VIRTUAL",
+   "ig"
+  ],
+  [
+   "GABRIELA HENRIQUES",
+   241.9,
+   "2026-05-23",
+   "LOJA VIRTUAL",
+   "ig"
+  ],
+  [
+   "DISTRIBUIDORA SABOR VERDE ME",
+   698.26,
+   "2026-05-07",
+   "B2B_PORTAL",
+   "1-Google Ads"
+  ],
+  [
+   "ATACADO DELÍCIAS DO SERTÃO EIRELI",
+   939.87,
+   "2026-05-23",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "ATACADO MARMITA FELIZ EIRELI",
+   781.7,
+   "2026-05-08",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "WESLEY PEIXOTO",
+   457.32,
+   "2026-05-22",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "ATACADO ESTAÇÃO LANCHES LTDA",
+   1018.66,
+   "2026-05-06",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "PAULA HENRIQUES",
+   336.9,
+   "2026-05-17",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "BRUNO GUIMARÃES",
+   92.96,
+   "2026-05-14",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "EMBALAGENS MARMITA FELIZ",
+   1120.75,
+   "2026-05-28",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "VÂNIA RIBEIRO",
+   445.82,
+   "2026-05-02",
+   "LOJA VIRTUAL",
+   "ig"
+  ],
+  [
+   "WESLEY MAGALHÃES",
+   247.21,
+   "2026-05-16",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "OTÁVIO ESTEVES",
+   171.6,
+   "2026-05-21",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "RAFAEL HENRIQUES",
+   153.36,
+   "2026-05-19",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "EMBALAGENS ESTAÇÃO LANCHES ME",
+   1289.38,
+   "2026-05-10",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "EMBALAGENS ESTAÇÃO LANCHES ME",
+   1293.68,
+   "2026-05-26",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "HUGO DAMASCENO",
+   245.06,
+   "2026-05-12",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "MÁRCIO HENRIQUES",
+   235.38,
+   "2026-05-20",
+   "LOJA VIRTUAL",
+   "ig"
+  ],
+  [
+   "CARLA TOLEDO",
+   233.15,
+   "2026-05-02",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "WESLEY ESTEVES",
+   278.14,
+   "2026-05-11",
+   "LOJA VIRTUAL",
+   "ig"
+  ],
+  [
+   "PAULA SIMÕES",
+   137.29,
+   "2026-05-08",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "JOÃO PEIXOTO",
+   491.65,
+   "2026-05-08",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "JOÃO ESTEVES",
+   460,
+   "2026-05-01",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "COMERCIAL ESTAÇÃO LANCHES EIRELI",
+   850.41,
+   "2026-05-06",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "ÍRIS PEIXOTO",
+   445.98,
+   "2026-05-16",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "NATÁLIA LACERDA",
+   119.09,
+   "2026-05-06",
+   "LOJA VIRTUAL",
+   "chatgpt.com"
+  ],
+  [
+   "JOÃO MAGALHÃES",
+   462.81,
+   "2026-05-06",
+   "LOJA VIRTUAL",
+   "chatgpt.com"
+  ],
+  [
+   "DISTRIBUIDORA DOCE LAR LTDA",
+   1250.25,
+   "2026-05-15",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "FÁBIO LACERDA",
+   154.77,
+   "2026-05-19",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "BRUNO FALCÃO",
+   221.35,
+   "2026-05-13",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "ÍRIS CARDOSO",
+   188.99,
+   "2026-05-08",
+   "LOJA VIRTUAL",
+   "chatgpt.com"
+  ],
+  [
+   "FÁBIO CARDOSO",
+   373.09,
+   "2026-05-23",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "VÂNIA BRANDÃO",
+   354.41,
+   "2026-05-17",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "HUGO HENRIQUES",
+   173.08,
+   "2026-05-04",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "GABRIELA MAGALHÃES",
+   328.03,
+   "2026-05-26",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "OTÁVIO PEIXOTO",
+   415.1,
+   "2026-05-10",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "DEPÓSITO SOL NASCENTE LTDA",
+   1548.23,
+   "2026-05-07",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "OTÁVIO GUIMARÃES",
+   197.38,
+   "2026-05-04",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "DISTRIBUIDORA MARMITA FELIZ LTDA",
+   526.87,
+   "2026-05-23",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "SÔNIA MAGALHÃES",
+   257.59,
+   "2026-05-10",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "DIEGO CARDOSO",
+   404.15,
+   "2026-05-01",
+   "LOJA VIRTUAL",
+   "chatgpt.com"
+  ],
+  [
+   "DISTRIBUIDORA MARMITA FELIZ EIRELI",
+   689.9,
+   "2026-05-08",
+   "B2B_PORTAL",
+   "1-Google Ads"
+  ],
+  [
+   "CENTRAL DOCE LAR",
+   897,
+   "2026-05-31",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "ÍRIS RIBEIRO",
+   461.06,
+   "2026-05-17",
+   "LOJA VIRTUAL",
+   "chatgpt.com"
+  ],
+  [
+   "TIAGO LACERDA",
+   406.51,
+   "2026-05-22",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "OTÁVIO GUIMARÃES",
+   422.96,
+   "2026-05-29",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "OTÁVIO ORLEANS",
+   368.16,
+   "2026-05-16",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "COMERCIAL SÃO JOÃO LTDA",
+   1550.87,
+   "2026-05-16",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "DIEGO DAMASCENO",
+   314.97,
+   "2026-05-07",
+   "LOJA VIRTUAL",
+   "ig"
+  ],
+  [
+   "BRUNO MAGALHÃES",
+   175.04,
+   "2026-05-07",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "CENTRAL BOA MESA",
+   1516.44,
+   "2026-05-16",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "RAFAEL FALCÃO",
+   198.52,
+   "2026-05-12",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "BRUNO ESTEVES",
+   233.99,
+   "2026-05-13",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "EMPÓRIO VILA GOURMET LTDA",
+   681.65,
+   "2026-05-21",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "EMPÓRIO MARMITA FELIZ ME",
+   1093.29,
+   "2026-05-09",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "ANA MAGALHÃES",
+   454.19,
+   "2026-05-01",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "DEPÓSITO TERRA NOSSA LTDA",
+   1063.45,
+   "2026-05-23",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "HUGO MAGALHÃES",
+   482.71,
+   "2026-05-30",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "LARISSA DAMASCENO",
+   233.75,
+   "2026-05-01",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "SÔNIA ORLEANS",
+   126.7,
+   "2026-05-27",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "FÁBIO ESTEVES",
+   463.14,
+   "2026-05-26",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "DIEGO RIBEIRO",
+   319.32,
+   "2026-05-12",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "DISTRIBUIDORA MARMITA FELIZ LTDA",
+   1481.06,
+   "2026-05-18",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "CARLA RIBEIRO",
+   353.03,
+   "2026-05-26",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "FÁBIO CARDOSO",
+   183.1,
+   "2026-05-09",
+   "LOJA VIRTUAL",
+   "ig"
+  ],
+  [
+   "LARISSA FALCÃO",
+   108.39,
+   "2026-05-07",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "GABRIELA ORLEANS",
+   388.53,
+   "2026-05-02",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "CENTRAL CAFÉ PARAÍSO ME",
+   657.94,
+   "2026-05-25",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "EMPÓRIO SÃO JOÃO LTDA",
+   442.04,
+   "2026-05-27",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "CENTRAL DELÍCIAS DO SERTÃO",
+   615.6,
+   "2026-05-12",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "JOÃO TOLEDO",
+   339.1,
+   "2026-05-08",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "JOÃO HENRIQUES",
+   114.4,
+   "2026-05-19",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "EMPÓRIO SÃO JOÃO LTDA",
+   1272.23,
+   "2026-05-23",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "RAFAEL HENRIQUES",
+   303.04,
+   "2026-05-06",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "CENTRAL DELÍCIAS DO SERTÃO",
+   1551.26,
+   "2026-05-21",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "ANA ALBUQUERQUE",
+   519.68,
+   "2026-05-12",
+   "LOJA VIRTUAL",
+   "chatgpt.com"
+  ],
+  [
+   "DEPÓSITO MARMITA FELIZ LTDA",
+   882.33,
+   "2026-05-23",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "EMPÓRIO OURO PRETO",
+   1170.9,
+   "2026-05-03",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "HUGO NOGUEIRA",
+   329.56,
+   "2026-05-13",
+   "LOJA VIRTUAL",
+   "chatgpt.com"
+  ],
+  [
+   "EMBALAGENS TERRA NOSSA",
+   780.03,
+   "2026-05-16",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "EMBALAGENS BOA MESA",
+   1035.4,
+   "2026-05-13",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "GABRIELA GUIMARÃES",
+   455.97,
+   "2026-05-13",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "ATACADO DOCE LAR EIRELI",
+   1019.81,
+   "2026-05-02",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "EMBALAGENS CAFÉ PARAÍSO",
+   1181.62,
+   "2026-05-30",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "EMPÓRIO ESTAÇÃO LANCHES",
+   1072.84,
+   "2026-05-02",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "VÂNIA GUIMARÃES",
+   318.91,
+   "2026-05-19",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "DIEGO ESTEVES",
+   312.16,
+   "2026-05-10",
+   "LOJA VIRTUAL",
+   "chatgpt.com"
+  ],
+  [
+   "ATACADO PÃO DOURADO",
+   1021.05,
+   "2026-05-08",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "CENTRAL DELÍCIAS DO SERTÃO",
+   1169.66,
+   "2026-05-05",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "OTÁVIO QUINTELA",
+   230.81,
+   "2026-05-30",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "EMBALAGENS PÃO DOURADO ME",
+   419.36,
+   "2026-05-13",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "NATÁLIA ALBUQUERQUE",
+   259.36,
+   "2026-05-16",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "NATÁLIA ORLEANS",
+   184.89,
+   "2026-05-13",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "VÂNIA TOLEDO",
+   114.88,
+   "2026-05-05",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "PAULA NOGUEIRA",
+   330.74,
+   "2026-05-17",
+   "LOJA VIRTUAL",
+   "ig"
+  ],
+  [
+   "TIAGO TOLEDO",
+   407.48,
+   "2026-05-25",
+   "LOJA VIRTUAL",
+   "chatgpt.com"
+  ],
+  [
+   "CARLA QUINTELA",
+   260.79,
+   "2026-05-24",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "LARISSA DAMASCENO",
+   292.73,
+   "2026-05-30",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "CENTRAL DOCE LAR",
+   1383.94,
+   "2026-05-03",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "COMERCIAL FOGÃO À LENHA EIRELI",
+   1303.44,
+   "2026-05-04",
+   "B2B_PORTAL",
+   "1-Google Ads"
+  ],
+  [
+   "TIAGO VALENÇA",
+   142.09,
+   "2026-05-23",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "TIAGO MAGALHÃES",
+   208.07,
+   "2026-05-18",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "RAFAEL DAMASCENO",
+   353.13,
+   "2026-05-21",
+   "LOJA VIRTUAL",
+   "chatgpt.com"
+  ],
+  [
+   "GABRIELA BRANDÃO",
+   333.1,
+   "2026-05-26",
+   "LOJA VIRTUAL",
+   "ig"
+  ],
+  [
+   "DIEGO QUINTELA",
+   376.31,
+   "2026-05-10",
+   "LOJA VIRTUAL",
+   "chatgpt.com"
+  ],
+  [
+   "DIEGO ORLEANS",
+   374.05,
+   "2026-05-29",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "TIAGO FALCÃO",
+   90.94,
+   "2026-05-03",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "ÍRIS LACERDA",
+   126.25,
+   "2026-05-01",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "ANA BRANDÃO",
+   442.11,
+   "2026-05-23",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "BRUNO GUIMARÃES",
+   476.84,
+   "2026-05-01",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "ELISA NOGUEIRA",
+   482.16,
+   "2026-05-14",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "RAFAEL ESTEVES",
+   255.54,
+   "2026-05-29",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "DISTRIBUIDORA MARMITA FELIZ LTDA",
+   519.44,
+   "2026-05-13",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "EMPÓRIO SÃO JOÃO",
+   811.34,
+   "2026-05-01",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "DEPÓSITO GRÃO NOBRE",
+   776.04,
+   "2026-05-28",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "TIAGO GUIMARÃES",
+   350.55,
+   "2026-05-18",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "WESLEY HENRIQUES",
+   367.55,
+   "2026-05-30",
+   "LOJA VIRTUAL",
+   "ig"
+  ],
+  [
+   "WESLEY VALENÇA",
+   95.44,
+   "2026-05-21",
+   "LOJA VIRTUAL",
+   "ig"
+  ],
+  [
+   "RAFAEL PEIXOTO",
+   470.08,
+   "2026-05-04",
+   "LOJA VIRTUAL",
+   "ig"
+  ],
+  [
+   "EMPÓRIO BOM PRATO EIRELI",
+   683.58,
+   "2026-05-04",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "DISTRIBUIDORA DOCE LAR LTDA",
+   799.88,
+   "2026-05-16",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "EMBALAGENS VILA GOURMET LTDA",
+   830.67,
+   "2026-05-11",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "EMBALAGENS GRÃO NOBRE ME",
+   407.02,
+   "2026-05-10",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "ANA SIMÕES",
+   258.95,
+   "2026-05-10",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "COMERCIAL FOGÃO À LENHA EIRELI",
+   564.46,
+   "2026-05-25",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "DISTRIBUIDORA CANTINHO MINEIRO ME",
+   1245.24,
+   "2026-05-29",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "WESLEY LACERDA",
+   188.9,
+   "2026-05-07",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "JOÃO QUINTELA",
+   179.09,
+   "2026-05-31",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "WESLEY PEIXOTO",
+   88.57,
+   "2026-05-13",
+   "LOJA VIRTUAL",
+   "ig"
+  ],
+  [
+   "EMBALAGENS ESTAÇÃO LANCHES ME",
+   1234.5,
+   "2026-05-10",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "WESLEY PEIXOTO",
+   500,
+   "2026-05-02",
+   "LOJA VIRTUAL",
+   "ig"
+  ],
+  [
+   "VÂNIA SIMÕES",
+   433.56,
+   "2026-05-09",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "OTÁVIO LACERDA",
+   363.86,
+   "2026-05-15",
+   "LOJA VIRTUAL",
+   "ig"
+  ],
+  [
+   "ÍRIS FALCÃO",
+   457.97,
+   "2026-05-10",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "PAULA RIBEIRO",
+   320.7,
+   "2026-05-12",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "DIEGO LACERDA",
+   115.79,
+   "2026-05-23",
+   "LOJA VIRTUAL",
+   "ig"
+  ],
+  [
+   "EMPÓRIO TERRA NOSSA",
+   1000.77,
+   "2026-05-05",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "EMPÓRIO CAFÉ PARAÍSO LTDA",
+   755.45,
+   "2026-05-09",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "DISTRIBUIDORA BOM PRATO EIRELI",
+   1546.33,
+   "2026-05-31",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "EMPÓRIO OURO PRETO",
+   588.19,
+   "2026-05-01",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "CARLA MAGALHÃES",
+   178.65,
+   "2026-05-22",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "SÔNIA CARDOSO",
+   219.48,
+   "2026-05-22",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "GABRIELA ORLEANS",
+   296.42,
+   "2026-05-08",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "CENTRAL OURO PRETO ME",
+   904.67,
+   "2026-05-03",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "DEPÓSITO MARÉ ALTA",
+   413.79,
+   "2026-05-25",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "ATACADO BOA MESA EIRELI",
+   498.31,
+   "2026-05-12",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "COMERCIAL BOA MESA EIRELI",
+   1216.57,
+   "2026-05-26",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "WESLEY RIBEIRO",
+   490.05,
+   "2026-05-14",
+   "LOJA VIRTUAL",
+   "ig"
+  ],
+  [
+   "COMERCIAL MARÉ ALTA EIRELI",
+   1472.83,
+   "2026-05-22",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "ELISA FALCÃO",
+   281.29,
+   "2026-05-07",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "GABRIELA TOLEDO",
+   151,
+   "2026-05-30",
+   "LOJA VIRTUAL",
+   "ig"
+  ],
+  [
+   "DISTRIBUIDORA DOCE LAR ME",
+   871.13,
+   "2026-05-20",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "DISTRIBUIDORA MARMITA FELIZ LTDA",
+   1068.28,
+   "2026-05-14",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "ELISA ESTEVES",
+   132.99,
+   "2026-05-30",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "ATACADO DELÍCIAS DO SERTÃO EIRELI",
+   1296.88,
+   "2026-05-24",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "PAULA SIMÕES",
+   212.48,
+   "2026-05-24",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "TIAGO SIMÕES",
+   285.35,
+   "2026-05-21",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "MÁRCIO HENRIQUES",
+   290.54,
+   "2026-05-24",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "ÍRIS MAGALHÃES",
+   97.65,
+   "2026-05-06",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "DIEGO ESTEVES",
+   187.24,
+   "2026-05-10",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "DEPÓSITO GRÃO NOBRE",
+   808.33,
+   "2026-05-24",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "DIEGO FALCÃO",
+   255.32,
+   "2026-05-20",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "COMERCIAL SOL NASCENTE ME",
+   692.1,
+   "2026-05-28",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "WESLEY PEIXOTO",
+   362.04,
+   "2026-05-13",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "EMBALAGENS MARMITA FELIZ",
+   547.04,
+   "2026-05-06",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "DIEGO VALENÇA",
+   222.85,
+   "2026-05-05",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "MÁRCIO QUINTELA",
+   182.52,
+   "2026-05-10",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "DISTRIBUIDORA TERRA NOSSA LTDA",
+   1267.67,
+   "2026-05-23",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "TIAGO TOLEDO",
+   238.55,
+   "2026-05-30",
+   "LOJA VIRTUAL",
+   "ig"
+  ],
+  [
+   "NATÁLIA VALENÇA",
+   278.37,
+   "2026-05-21",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "COMERCIAL MARMITA FELIZ ME",
+   729.1,
+   "2026-05-18",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "CENTRAL BOA MESA",
+   819.96,
+   "2026-05-14",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "VÂNIA LACERDA",
+   304.64,
+   "2026-05-08",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "EMPÓRIO MARMITA FELIZ EIRELI",
+   1461.98,
+   "2026-05-21",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "CENTRAL GRÃO NOBRE EIRELI",
+   626.23,
+   "2026-05-28",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "PAULA FALCÃO",
+   229.24,
+   "2026-05-24",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "ATACADO BOA MESA EIRELI",
+   1451.44,
+   "2026-05-20",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "JOÃO ORLEANS",
+   458.69,
+   "2026-05-01",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "EMPÓRIO CANTINHO MINEIRO ME",
+   813.21,
+   "2026-05-30",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "EMBALAGENS ESTAÇÃO LANCHES ME",
+   1268.33,
+   "2026-05-12",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "ATACADO PÃO DOURADO",
+   1327.33,
+   "2026-05-24",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "EMPÓRIO CANTINHO MINEIRO ME",
+   1583.71,
+   "2026-05-09",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "HUGO LACERDA",
+   434.32,
+   "2026-05-03",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "ATACADO BOA MESA EIRELI",
+   1354.24,
+   "2026-05-23",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "DEPÓSITO CAFÉ PARAÍSO",
+   412.57,
+   "2026-05-07",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "DEPÓSITO MARMITA FELIZ LTDA",
+   1003.39,
+   "2026-05-21",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "EMPÓRIO GRÃO NOBRE LTDA",
+   1454.75,
+   "2026-05-28",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "CENTRAL MARÉ ALTA EIRELI",
+   1498.24,
+   "2026-05-17",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "DEPÓSITO DELÍCIAS DO SERTÃO LTDA",
+   446.34,
+   "2026-05-15",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "FÁBIO PEIXOTO",
+   288.28,
+   "2026-05-31",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "COMERCIAL GRÃO NOBRE ME",
+   823.35,
+   "2026-05-23",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "SÔNIA MAGALHÃES",
+   444.64,
+   "2026-05-19",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "DIEGO HENRIQUES",
+   238.07,
+   "2026-05-18",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "DISTRIBUIDORA MARMITA FELIZ LTDA",
+   1144.63,
+   "2026-05-28",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "DISTRIBUIDORA PÃO DOURADO EIRELI",
+   705.19,
+   "2026-05-20",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "WESLEY MAGALHÃES",
+   123.45,
+   "2026-05-03",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "DEPÓSITO HORTA VIVA",
+   699.41,
+   "2026-05-07",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "TIAGO NOGUEIRA",
+   401.3,
+   "2026-05-21",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "OTÁVIO TOLEDO",
+   511.79,
+   "2026-05-24",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "OTÁVIO HENRIQUES",
+   430.08,
+   "2026-05-01",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "OTÁVIO PEIXOTO",
+   282.29,
+   "2026-05-03",
+   "LOJA VIRTUAL",
+   "ig"
+  ],
+  [
+   "DISTRIBUIDORA SABOR VERDE",
+   1409.21,
+   "2026-05-03",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "COMERCIAL BOA MESA EIRELI",
+   881.41,
+   "2026-05-05",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "PAULA DAMASCENO",
+   286.59,
+   "2026-05-07",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "EMPÓRIO VILA GOURMET LTDA",
+   592.87,
+   "2026-05-30",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "NATÁLIA PEIXOTO",
+   468.6,
+   "2026-05-17",
+   "LOJA VIRTUAL",
+   "ig"
+  ],
+  [
+   "EMPÓRIO FOGÃO À LENHA EIRELI",
+   636.18,
+   "2026-05-25",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "BRUNO CARDOSO",
+   205.23,
+   "2026-05-24",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "NATÁLIA LACERDA",
+   451.88,
+   "2026-05-02",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "SÔNIA BRANDÃO",
+   409.38,
+   "2026-05-14",
+   "LOJA VIRTUAL",
+   "chatgpt.com"
+  ],
+  [
+   "DEPÓSITO MARMITA FELIZ LTDA",
+   1096.88,
+   "2026-05-24",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "DISTRIBUIDORA SABOR VERDE",
+   1092.13,
+   "2026-05-10",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "ATACADO DOCE LAR EIRELI",
+   527.75,
+   "2026-05-07",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "EMBALAGENS GRÃO NOBRE ME",
+   841.61,
+   "2026-05-01",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "DIEGO LACERDA",
+   435.93,
+   "2026-05-31",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "WESLEY GUIMARÃES",
+   284.32,
+   "2026-05-05",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "TIAGO ORLEANS",
+   160.78,
+   "2026-05-11",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "CENTRAL BOM PRATO ME",
+   390.81,
+   "2026-05-02",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "FÁBIO CARDOSO",
+   238.26,
+   "2026-05-29",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "CENTRAL VILA GOURMET",
+   1166.19,
+   "2026-05-30",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "VÂNIA CARDOSO",
+   283.5,
+   "2026-05-21",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "EMPÓRIO TERRA NOSSA",
+   402.14,
+   "2026-05-29",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "ANA TOLEDO",
+   100.32,
+   "2026-05-24",
+   "LOJA VIRTUAL",
+   "ig"
+  ],
+  [
+   "EMPÓRIO CANTINHO MINEIRO EIRELI",
+   1320.39,
+   "2026-05-18",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "ÍRIS NOGUEIRA",
+   201.12,
+   "2026-05-21",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "CARLA ESTEVES",
+   231.23,
+   "2026-05-23",
+   "LOJA VIRTUAL",
+   "chatgpt.com"
+  ],
+  [
+   "EMPÓRIO FOGÃO À LENHA EIRELI",
+   492.93,
+   "2026-05-11",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "DEPÓSITO MARÉ ALTA",
+   1234.21,
+   "2026-05-10",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "WESLEY FALCÃO",
+   328.6,
+   "2026-05-18",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "EMBALAGENS SÃO JOÃO",
+   1080.77,
+   "2026-05-23",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "NATÁLIA TOLEDO",
+   342.66,
+   "2026-05-10",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "JOÃO ORLEANS",
+   137.38,
+   "2026-05-03",
+   "LOJA VIRTUAL",
+   "ig"
+  ],
+  [
+   "ATACADO TERRA NOSSA",
+   563.89,
+   "2026-05-25",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "HUGO GUIMARÃES",
+   150.82,
+   "2026-05-08",
+   "LOJA VIRTUAL",
+   "chatgpt.com"
+  ],
+  [
+   "COMERCIAL BOA MESA ME",
+   1192.75,
+   "2026-05-08",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "WESLEY ORLEANS",
+   323.7,
+   "2026-05-11",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "HUGO LACERDA",
+   161.95,
+   "2026-05-03",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "OTÁVIO RIBEIRO",
+   96.11,
+   "2026-05-14",
+   "LOJA VIRTUAL",
+   "ig"
+  ],
+  [
+   "HUGO MAGALHÃES",
+   215.3,
+   "2026-05-08",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "COMERCIAL GRÃO NOBRE ME",
+   477.89,
+   "2026-05-20",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "NATÁLIA RIBEIRO",
+   324.08,
+   "2026-05-14",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "OTÁVIO TOLEDO",
+   480.59,
+   "2026-05-13",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "TIAGO DAMASCENO",
+   118.67,
+   "2026-05-05",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "GABRIELA LACERDA",
+   283.46,
+   "2026-05-06",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "NATÁLIA GUIMARÃES",
+   109.53,
+   "2026-05-12",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "NATÁLIA LACERDA",
+   367.51,
+   "2026-05-20",
+   "LOJA VIRTUAL",
+   "chatgpt.com"
+  ],
+  [
+   "VÂNIA HENRIQUES",
+   128.63,
+   "2026-05-22",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "OTÁVIO PEIXOTO",
+   192.83,
+   "2026-05-17",
+   "LOJA VIRTUAL",
+   "ig"
+  ],
+  [
+   "RAFAEL HENRIQUES",
+   469.64,
+   "2026-05-13",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "GABRIELA LACERDA",
+   138.93,
+   "2026-05-16",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "CENTRAL BOM PRATO EIRELI",
+   679.66,
+   "2026-05-02",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "WESLEY HENRIQUES",
+   493.58,
+   "2026-05-28",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "EMPÓRIO SABOR VERDE EIRELI",
+   1549.9,
+   "2026-05-18",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "TIAGO BRANDÃO",
+   514.26,
+   "2026-05-17",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "DEPÓSITO OURO PRETO ME",
+   1538.49,
+   "2026-05-06",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "HUGO DAMASCENO",
+   207.35,
+   "2026-05-07",
+   "LOJA VIRTUAL",
+   "chatgpt.com"
+  ],
+  [
+   "DISTRIBUIDORA FOGÃO À LENHA ME",
+   487.1,
+   "2026-05-06",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "WESLEY ALBUQUERQUE",
+   313.53,
+   "2026-05-25",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "COMERCIAL SÃO JOÃO LTDA",
+   914.69,
+   "2026-05-25",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "GABRIELA ESTEVES",
+   142.33,
+   "2026-05-11",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "BRUNO SIMÕES",
+   206.04,
+   "2026-05-15",
+   "LOJA VIRTUAL",
+   "ig"
+  ],
+  [
+   "ELISA MAGALHÃES",
+   288.95,
+   "2026-05-30",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "DISTRIBUIDORA FOGÃO À LENHA ME",
+   957.01,
+   "2026-05-11",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "TIAGO DAMASCENO",
+   295.96,
+   "2026-05-19",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "EMBALAGENS VILA GOURMET ME",
+   1420.29,
+   "2026-05-07",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "DIEGO VALENÇA",
+   442.08,
+   "2026-05-03",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "CENTRAL TERRA NOSSA",
+   521.52,
+   "2026-05-26",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "COMERCIAL AÇAÍ & CIA ME",
+   1475.06,
+   "2026-05-16",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "EMPÓRIO MARMITA FELIZ EIRELI",
+   429.26,
+   "2026-05-25",
+   "B2B_PORTAL",
+   "1-Google Ads"
+  ],
+  [
+   "SÔNIA DAMASCENO",
+   416.18,
+   "2026-05-24",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "HUGO HENRIQUES",
+   510.61,
+   "2026-05-08",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "PAULA ORLEANS",
+   200.44,
+   "2026-05-09",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "SÔNIA BRANDÃO",
+   90.06,
+   "2026-05-30",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "RAFAEL VALENÇA",
+   347.1,
+   "2026-05-12",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "BRUNO PEIXOTO",
+   185.05,
+   "2026-05-15",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "COMERCIAL HORTA VIVA",
+   1529.74,
+   "2026-05-15",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "SÔNIA ALBUQUERQUE",
+   467.49,
+   "2026-05-24",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "ELISA ESTEVES",
+   423.59,
+   "2026-05-31",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "WESLEY ORLEANS",
+   246.04,
+   "2026-05-24",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "EMBALAGENS CAFÉ PARAÍSO",
+   797.97,
+   "2026-05-15",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "CENTRAL VILA GOURMET",
+   869.73,
+   "2026-05-26",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "DISTRIBUIDORA BOM PRATO EIRELI",
+   977.67,
+   "2026-05-05",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "ÍRIS NOGUEIRA",
+   193.48,
+   "2026-05-15",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "MÁRCIO QUINTELA",
+   412.22,
+   "2026-05-18",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "ATACADO BOA MESA EIRELI",
+   373.51,
+   "2026-05-09",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "WESLEY SIMÕES",
+   442.55,
+   "2026-05-28",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "DISTRIBUIDORA SABOR VERDE ME",
+   1037.37,
+   "2026-05-03",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "CENTRAL DELÍCIAS DO SERTÃO",
+   940.86,
+   "2026-05-02",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "CENTRAL SOL NASCENTE ME",
+   1348.05,
+   "2026-05-05",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "COMERCIAL CAFÉ PARAÍSO EIRELI",
+   383.78,
+   "2026-05-07",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "LARISSA RIBEIRO",
+   408.63,
+   "2026-05-27",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "DISTRIBUIDORA SOL NASCENTE EIRELI",
+   399.26,
+   "2026-05-05",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "DEPÓSITO TERRA NOSSA",
+   666.84,
+   "2026-05-14",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "EMPÓRIO CANTINHO MINEIRO ME",
+   612.78,
+   "2026-05-04",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "PAULA FALCÃO",
+   121.3,
+   "2026-05-12",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "BRUNO BRANDÃO",
+   180.83,
+   "2026-05-10",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "NATÁLIA QUINTELA",
+   113.84,
+   "2026-05-05",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "LARISSA ORLEANS",
+   421.32,
+   "2026-05-18",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "NATÁLIA LACERDA",
+   275.19,
+   "2026-05-21",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "ATACADO DELÍCIAS DO SERTÃO",
+   1425.66,
+   "2026-05-14",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "EMBALAGENS ESTAÇÃO LANCHES ME",
+   1237.47,
+   "2026-05-07",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "FÁBIO BRANDÃO",
+   195.73,
+   "2026-05-26",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "HUGO GUIMARÃES",
+   412.92,
+   "2026-05-19",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "WESLEY GUIMARÃES",
+   464.84,
+   "2026-05-14",
+   "LOJA VIRTUAL",
+   "chatgpt.com"
+  ],
+  [
+   "CENTRAL MARÉ ALTA EIRELI",
+   555,
+   "2026-05-18",
+   "B2B_PORTAL",
+   "1-Google Ads"
+  ],
+  [
+   "WESLEY VALENÇA",
+   285.25,
+   "2026-05-06",
+   "LOJA VIRTUAL",
+   "chatgpt.com"
+  ],
+  [
+   "EMPÓRIO MARMITA FELIZ ME",
+   408.2,
+   "2026-05-23",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "EMBALAGENS CAFÉ PARAÍSO",
+   1034.53,
+   "2026-05-03",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "BRUNO DAMASCENO",
+   303.87,
+   "2026-05-16",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "EMPÓRIO ESTAÇÃO LANCHES",
+   1281.37,
+   "2026-05-14",
+   "B2B_PORTAL",
+   "1-Google Ads"
+  ],
+  [
+   "DISTRIBUIDORA TERRA NOSSA LTDA",
+   1177.85,
+   "2026-05-10",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "ATACADO ESTAÇÃO LANCHES LTDA",
+   757.68,
+   "2026-05-31",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "ATACADO TERRA NOSSA",
+   892.35,
+   "2026-05-20",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "TIAGO BRANDÃO",
+   323.71,
+   "2026-05-08",
+   "LOJA VIRTUAL",
+   "chatgpt.com"
+  ],
+  [
+   "ANA NOGUEIRA",
+   445.44,
+   "2026-05-31",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "EMBALAGENS VILA GOURMET ME",
+   434.5,
+   "2026-05-01",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "ATACADO TERRA NOSSA",
+   1484.86,
+   "2026-05-22",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "CENTRAL BOM PRATO ME",
+   1574.32,
+   "2026-05-03",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "EMPÓRIO AÇAÍ & CIA EIRELI",
+   1263,
+   "2026-05-12",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "TIAGO QUINTELA",
+   341.83,
+   "2026-05-10",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "BRUNO TOLEDO",
+   432.09,
+   "2026-05-05",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "CENTRAL SOL NASCENTE ME",
+   1054.47,
+   "2026-05-23",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "NATÁLIA LACERDA",
+   119.75,
+   "2026-05-16",
+   "LOJA VIRTUAL",
+   "ig"
+  ],
+  [
+   "HUGO LACERDA",
+   275.78,
+   "2026-05-17",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "DEPÓSITO DOCE LAR",
+   379.88,
+   "2026-05-21",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "DISTRIBUIDORA SABOR VERDE ME",
+   706.67,
+   "2026-05-15",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "FÁBIO ALBUQUERQUE",
+   410.38,
+   "2026-05-09",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "DEPÓSITO OURO PRETO ME",
+   1112.33,
+   "2026-05-20",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "ÍRIS DAMASCENO",
+   492.72,
+   "2026-05-01",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "MÁRCIO GUIMARÃES",
+   409.94,
+   "2026-05-16",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "NATÁLIA ESTEVES",
+   164.67,
+   "2026-05-07",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "PAULA BRANDÃO",
+   307.32,
+   "2026-05-16",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "GABRIELA CARDOSO",
+   170.28,
+   "2026-05-09",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "PAULA TOLEDO",
+   513.96,
+   "2026-05-01",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "WESLEY DAMASCENO",
+   322.47,
+   "2026-05-27",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "VÂNIA BRANDÃO",
+   487.17,
+   "2026-05-04",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "CENTRAL DOCE LAR EIRELI",
+   1050.03,
+   "2026-05-29",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "SÔNIA ALBUQUERQUE",
+   519.84,
+   "2026-05-20",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "ÍRIS SIMÕES",
+   190.4,
+   "2026-05-16",
+   "LOJA VIRTUAL",
+   "ig"
+  ],
+  [
+   "ATACADO HORTA VIVA LTDA",
+   473.38,
+   "2026-05-01",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "EMPÓRIO MARMITA FELIZ EIRELI",
+   463.65,
+   "2026-05-16",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "PAULA FALCÃO",
+   168.82,
+   "2026-05-13",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "DEPÓSITO BOM PRATO",
+   1466.14,
+   "2026-05-08",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "WESLEY ALBUQUERQUE",
+   409,
+   "2026-05-26",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "DIEGO NOGUEIRA",
+   161.18,
+   "2026-05-15",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "VÂNIA BRANDÃO",
+   452.65,
+   "2026-05-08",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "LARISSA GUIMARÃES",
+   148.08,
+   "2026-05-07",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "CENTRAL GRÃO NOBRE",
+   662.09,
+   "2026-05-22",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "DEPÓSITO CAFÉ PARAÍSO",
+   1099.85,
+   "2026-05-16",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "HUGO TOLEDO",
+   244.03,
+   "2026-05-10",
+   "LOJA VIRTUAL",
+   "chatgpt.com"
+  ],
+  [
+   "EMPÓRIO MARMITA FELIZ ME",
+   951.72,
+   "2026-05-27",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "FÁBIO DAMASCENO",
+   247.86,
+   "2026-05-12",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "CENTRAL DELÍCIAS DO SERTÃO",
+   1509.33,
+   "2026-05-08",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "VÂNIA FALCÃO",
+   227.51,
+   "2026-05-29",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "EMBALAGENS GRÃO NOBRE ME",
+   692.04,
+   "2026-05-22",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "DEPÓSITO CAFÉ PARAÍSO",
+   1357.48,
+   "2026-05-23",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "CENTRAL SÃO JOÃO LTDA",
+   510.96,
+   "2026-05-11",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "ATACADO PÃO DOURADO",
+   980.12,
+   "2026-05-11",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "COMERCIAL CAFÉ PARAÍSO",
+   548.31,
+   "2026-05-17",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "OTÁVIO ALBUQUERQUE",
+   305.22,
+   "2026-05-15",
+   "LOJA VIRTUAL",
+   "chatgpt.com"
+  ],
+  [
+   "WESLEY CARDOSO",
+   187.23,
+   "2026-05-15",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "PAULA HENRIQUES",
+   283.25,
+   "2026-05-05",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "EMPÓRIO FOGÃO À LENHA EIRELI",
+   1031.18,
+   "2026-05-27",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "DEPÓSITO TERRA NOSSA LTDA",
+   621.7,
+   "2026-05-04",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "ÍRIS HENRIQUES",
+   249.73,
+   "2026-05-29",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "WESLEY MAGALHÃES",
+   506.97,
+   "2026-05-22",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "DIEGO FALCÃO",
+   282.24,
+   "2026-05-05",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "DISTRIBUIDORA BOM PRATO EIRELI",
+   509.99,
+   "2026-05-03",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "WESLEY RIBEIRO",
+   333.65,
+   "2026-05-31",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "ATACADO PÃO DOURADO",
+   479.58,
+   "2026-05-25",
+   "B2B_PORTAL",
+   "1-Google Ads"
+  ],
+  [
+   "ANA FALCÃO",
+   333.75,
+   "2026-05-13",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "EMPÓRIO VILA GOURMET LTDA",
+   1287.97,
+   "2026-05-01",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "EMPÓRIO DELÍCIAS DO SERTÃO",
+   1063.59,
+   "2026-05-11",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "DEPÓSITO SOL NASCENTE LTDA",
+   1222.52,
+   "2026-05-24",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "EMPÓRIO DELÍCIAS DO SERTÃO",
+   1050.99,
+   "2026-05-11",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "OTÁVIO NOGUEIRA",
+   109.94,
+   "2026-05-10",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "EMPÓRIO SABOR VERDE EIRELI",
+   497.23,
+   "2026-05-04",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "LARISSA ALBUQUERQUE",
+   389.86,
+   "2026-05-03",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "PAULA VALENÇA",
+   228.52,
+   "2026-05-21",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "DEPÓSITO MARMITA FELIZ",
+   543.87,
+   "2026-05-10",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "JOÃO LACERDA",
+   372,
+   "2026-05-05",
+   "LOJA VIRTUAL",
+   "ig"
+  ],
+  [
+   "BRUNO DAMASCENO",
+   111.2,
+   "2026-05-20",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "EMPÓRIO CANTINHO MINEIRO ME",
+   1368.45,
+   "2026-05-18",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "EMPÓRIO SÃO JOÃO",
+   1078.66,
+   "2026-05-07",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "SÔNIA GUIMARÃES",
+   166.29,
+   "2026-05-06",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "COMERCIAL SOL NASCENTE",
+   1012.08,
+   "2026-05-29",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "EMPÓRIO SOL NASCENTE EIRELI",
+   945.68,
+   "2026-05-30",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "EMBALAGENS PÃO DOURADO ME",
+   679.4,
+   "2026-05-25",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "EMBALAGENS DELÍCIAS DO SERTÃO",
+   1503.33,
+   "2026-05-12",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "BRUNO ESTEVES",
+   492.06,
+   "2026-05-18",
+   "LOJA VIRTUAL",
+   "1-Google Ads"
+  ],
+  [
+   "CENTRAL GRÃO NOBRE EIRELI",
+   460.65,
+   "2026-05-19",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "ATACADO HORTA VIVA LTDA",
+   1535.58,
+   "2026-05-04",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "DISTRIBUIDORA PÃO DOURADO EIRELI",
+   703.91,
+   "2026-05-13",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "VÂNIA LACERDA",
+   139.1,
+   "2026-05-18",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "FÁBIO TOLEDO",
+   141.77,
+   "2026-05-24",
+   "LOJA VIRTUAL",
+   "chatgpt.com"
+  ],
+  [
+   "DEPÓSITO CAFÉ PARAÍSO ME",
+   398.86,
+   "2026-05-20",
+   "B2B_PORTAL",
+   ""
+  ],
+  [
+   "DEPÓSITO SOL NASCENTE LTDA",
+   921.28,
+   "2026-05-05",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "GABRIELA GUIMARÃES",
+   130.92,
+   "2026-05-19",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "LARISSA BRANDÃO",
+   329.2,
+   "2026-05-08",
+   "LOJA VIRTUAL",
+   "5-Google Ads"
+  ],
+  [
+   "MÁRCIO HENRIQUES",
+   400.65,
+   "2026-05-17",
+   "LOJA VIRTUAL",
+   "chatgpt.com"
+  ],
+  [
+   "CENTRAL GRÃO NOBRE EIRELI",
+   572.91,
+   "2026-05-18",
+   "LOJA VIRTUAL",
+   ""
+  ],
+  [
+   "NATÁLIA SIMÕES",
+   409.34,
+   "2026-05-03",
+   "LOJA VIRTUAL",
+   "ig"
+  ]
+ ],
+ "ga": {
+  "todos": {
+   "carrinhos": 2380,
+   "compras": 476,
+   "receita": 529247.06,
+   "arppu": 1111.86
+  },
+  "direto": {
+   "carrinhos": 762,
+   "compras": 152,
+   "receita": 169359.06,
+   "arppu": 1114.2
+  },
+  "organico": {
+   "carrinhos": 500,
+   "compras": 100,
+   "receita": 111141.88,
+   "arppu": 1111.42
+  },
+  "pago": {
+   "carrinhos": 690,
+   "compras": 138,
+   "receita": 153481.65,
+   "arppu": 1112.19
+  },
+  "outros": {
+   "carrinhos": 428,
+   "compras": 86,
+   "receita": 95264.47,
+   "arppu": 1107.73
+  },
+  "participacaoPagoReceita": 29
+ },
+ "produtos": {
+  "totalItens": 2344,
+  "receita": 153343.01,
+  "top5": [
+   {
+    "nome": "Copo térmico 240ml | 25 unidades",
+    "itens": 226,
+    "receita": 5670.47
+   },
+   {
+    "nome": "Tampa para copo 300ml | 100 unidades",
+    "itens": 224,
+    "receita": 6370.6
+   },
+   {
+    "nome": "Copo de papel 500ml | 50 unidades",
+    "itens": 196,
+    "receita": 8595.73
+   },
+   {
+    "nome": "Pote para sorvete 240ml | 50 unidades",
+    "itens": 173,
+    "receita": 6738.17
+   },
+   {
+    "nome": "Bowl de fibra 600ml | 100 unidades",
+    "itens": 148,
+    "receita": 21301.44
+   }
+  ]
+ },
+ "visitas": {
+  "total": 4298,
+  "pageviews": 20412,
+  "pedidosIniciados": 621,
+  "conversao": 14.45,
+  "mediaDia": 138.6
+ },
+ "meta": {
+  "alcance": 330792,
+  "impressoes": 516423,
+  "cliques": 1082,
+  "ctr": 0.21,
+  "cpc": 1.484,
+  "valorUsado": 1605.69,
+  "compras": 119,
+  "custoPorCompra": 13.49
+ },
+ "informacoes": {
+  "focoAnalise": "",
+  "implementacoes": "",
+  "correcoes": "",
+  "decisoes": "Manter o orçamento do Google Ads concentrado em campanhas de pesquisa com intenção de compra.",
+  "proximosPassos": "Acompanhar a conversão da loja e testar uma nova campanha de remarketing no Meta Ads."
+ },
+ "analises": {
+  "conclusao": "Em Maio de 2026, o faturamento seguiu concentrado na rede de parceiros, enquanto as vendas sem parceiros mantiveram um patamar estável. (Texto fictício de demonstração.)"
+ }
+}

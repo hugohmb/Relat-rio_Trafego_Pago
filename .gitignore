@@ -1,0 +1,24 @@
+# Dependências e builds
+node_modules/
+dist/
+
+# Dados reais — NUNCA versionar
+/config/
+/dados/
+/dados-desenvolvimento/
+/projetos/
+/relatorios/
+/planilhas/
+/backups/
+/logs/
+*.env
+.env*
+gemini.json
+
+# Configuração da demonstração (pode conter chave do Gemini)
+exemplos/config/
+
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini

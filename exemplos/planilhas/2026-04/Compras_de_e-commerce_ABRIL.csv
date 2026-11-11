@@ -1,0 +1,92 @@
+# ----------------------------------------
+# Compras de e-commerce
+# Conta: Loja de Demonstração
+# Propriedade: Site de Demonstração – GA4
+# ----------------------------------------
+#  
+# Todos os usuários
+# Data de início: 20260401
+# Data de término: 20260430
+Nome do item,Itens vistos,Itens adicionados ao carrinho,Itens comprados,Receita do item
+Pote kraft 500ml | 100 unidades,1505,403,144,13197.530024
+Embalagem delivery 750ml biodegradável | 100 unidades,256,80,28,3322.694351
+Copo de papel 300ml | 50 unidades,5500,1511,582,20323.557247
+Bandeja de bagaço de cana 1kg | 200 unidades,1862,504,214,33547.330530
+Talher de madeira kit | 250 unidades,1835,451,167,9936.096033
+Sacola kraft média com alça | 100 unidades,577,148,53,3764.100238
+Marmita kraft 2 divisões | 100 unidades,2994,661,252,29955.884205
+Tampa para copo 300ml | 100 unidades,1888,294,165,4926.089695
+Canudo de papel embalado | 500 unidades,546,213,79,3493.941616
+Caixa para hambúrguer kraft | 100 unidades,1194,164,109,9469.173614
+Pote para sorvete 240ml | 50 unidades,4570,1329,598,21957.178467
+Guardanapo reciclado | 2000 unidades,275,61,30,1717.031211
+Pote kraft 250ml | 100 unidades,435,104,48,3352.003710
+Pote kraft 1000ml | 50 unidades,1850,558,262,26410.252144
+Copo de papel 500ml | 50 unidades,2727,888,438,20225.419052
+Embalagem para pizza 35cm | 50 unidades,3194,560,294,31881.179037
+Saco kraft para pão | 500 unidades,2446,991,372,18621.011825
+Bowl de fibra 600ml | 100 unidades,2211,627,279,35239.345406
+Prato de bagaço de cana 18cm | 100 unidades,1309,295,157,8954.746591
+Hashi de bambu | 100 pares,5019,752,480,15157.603493
+Caixa para doces 6 divisões | 50 unidades,3953,728,370,27017.683455
+Copo térmico 240ml | 25 unidades,5453,757,489,13254.329458
+Embalagem para salada 1L | 50 unidades,606,189,78,7051.126898
+Sacola kraft grande | 50 unidades,2380,896,356,33174.141810
+
+# Tráfego direto
+# Data de início: 20260401
+# Data de término: 20260430
+Nome do item,Itens vistos,Itens adicionados ao carrinho,Itens comprados,Receita do item
+Pote kraft 500ml | 100 unidades,1035,204,119,10412.314297
+Embalagem delivery 750ml biodegradável | 100 unidades,200,34,18,2117.085513
+Copo de papel 300ml | 50 unidades,1616,312,143,4974.203744
+Bandeja de bagaço de cana 1kg | 200 unidades,461,73,42,6739.844151
+Talher de madeira kit | 250 unidades,688,263,88,5097.692109
+Sacola kraft média com alça | 100 unidades,495,216,74,5764.552214
+Marmita kraft 2 divisões | 100 unidades,715,149,68,8137.650990
+Tampa para copo 300ml | 100 unidades,1512,476,207,5834.511889
+Canudo de papel embalado | 500 unidades,794,214,113,5119.384073
+Caixa para hambúrguer kraft | 100 unidades,425,96,45,3676.692757
+Pote para sorvete 240ml | 50 unidades,914,180,118,4422.079178
+Guardanapo reciclado | 2000 unidades,907,327,112,6165.144292
+Pote kraft 250ml | 100 unidades,887,135,81,4960.580489
+Pote kraft 1000ml | 50 unidades,92,25,10,1000.966885
+Copo de papel 500ml | 50 unidades,1072,178,90,3790.332458
+Embalagem para pizza 35cm | 50 unidades,623,200,77,8768.498490
+Saco kraft para pão | 500 unidades,784,229,101,5592.295151
+Bowl de fibra 600ml | 100 unidades,684,117,57,7340.100298
+Prato de bagaço de cana 18cm | 100 unidades,581,116,56,3351.063963
+Hashi de bambu | 100 pares,631,134,62,1790.643370
+Caixa para doces 6 divisões | 50 unidades,337,94,48,3449.818099
+Copo térmico 240ml | 25 unidades,1187,579,195,5200.763115
+Embalagem para salada 1L | 50 unidades,255,64,37,3274.494832
+Sacola kraft grande | 50 unidades,505,156,54,4678.163501
+
+# Tráfego pago
+# Data de início: 20260401
+# Data de término: 20260430
+Nome do item,Itens vistos,Itens adicionados ao carrinho,Itens comprados,Receita do item
+Pote kraft 500ml | 100 unidades,405,67,35,3264.108121
+Embalagem delivery 750ml biodegradável | 100 unidades,1249,285,107,11544.740289
+Copo de papel 300ml | 50 unidades,2884,577,254,7851.574761
+Bandeja de bagaço de cana 1kg | 200 unidades,385,125,59,8809.695731
+Talher de madeira kit | 250 unidades,408,101,55,3281.347330
+Sacola kraft média com alça | 100 unidades,997,266,92,6480.906698
+Marmita kraft 2 divisões | 100 unidades,1479,265,125,15268.178714
+Tampa para copo 300ml | 100 unidades,1772,392,170,4560.643921
+Canudo de papel embalado | 500 unidades,1297,507,171,8437.099482
+Caixa para hambúrguer kraft | 100 unidades,960,238,102,8984.602383
+Pote para sorvete 240ml | 50 unidades,991,443,157,6379.006979
+Guardanapo reciclado | 2000 unidades,680,154,72,4339.155101
+Pote kraft 250ml | 100 unidades,951,361,158,10073.135643
+Pote kraft 1000ml | 50 unidades,106,33,12,1242.921058
+Copo de papel 500ml | 50 unidades,627,97,59,2434.792038
+Embalagem para pizza 35cm | 50 unidades,611,168,64,7490.316169
+Saco kraft para pão | 500 unidades,1084,177,115,5731.887545
+Bowl de fibra 600ml | 100 unidades,1268,449,157,20892.782943
+Prato de bagaço de cana 18cm | 100 unidades,883,307,139,8194.387702
+Hashi de bambu | 100 pares,900,395,146,4152.576126
+Caixa para doces 6 divisões | 50 unidades,983,305,107,7929.330605
+Copo térmico 240ml | 25 unidades,1054,167,92,2259.728912
+Embalagem para salada 1L | 50 unidades,284,84,33,2815.668573
+Sacola kraft grande | 50 unidades,349,80,35,3263.200603

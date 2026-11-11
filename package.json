@@ -1,0 +1,78 @@
+{
+  "name": "automacao-vendas-ecofoodpack",
+  "version": "3.0.0",
+  "description": "Automação que transforma as exportações da Tray, Google Analytics 4 e Meta Ads em um relatório mensal de vendas e tráfego pago, com análises escritas pelo Gemini.",
+  "main": "desktop/main.cjs",
+  "private": true,
+  "author": "Seu Nome <https://github.com/seu-usuario>",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "servidor": "node server.js",
+    "demo": "node exemplos/iniciar-demo.cjs",
+    "dados-exemplo": "node exemplos/gerar-dados-exemplo.mjs",
+    "instalador": "electron-builder --win nsis --x64 --publish never"
+  },
+  "dependencies": {
+    "@google/genai": "2.13.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "electron": "43.1.1",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "br.com.ecofoodpack.automacaovendas",
+    "productName": "Automação de Vendas EcofoodPack",
+    "executableName": "AutomacaoVendasEcofoodPack",
+    "artifactName": "Instalar-Automacao-de-Vendas-EcofoodPack-${version}.${ext}",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "desktop/**",
+      "public/**",
+      "server.js",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "build/icon.ico",
+        "to": "icon.ico"
+      },
+      {
+        "from": "build/icon.png",
+        "to": "icon.png"
+      }
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": "always",
+      "createStartMenuShortcut": true,
+      "shortcutName": "Automação de Vendas EcofoodPack",
+      "uninstallDisplayName": "Automação de Vendas EcofoodPack",
+      "deleteAppDataOnUninstall": false,
+      "installerIcon": "build/icon.ico",
+      "uninstallerIcon": "build/icon.ico"
+    },
+    "publish": null
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/seu-usuario/automacao-vendas-ecofoodpack"
+  }
+}
